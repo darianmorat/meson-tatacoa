@@ -1,0 +1,68 @@
+import React, { useMemo } from "react";
+import View360, { ControlBar, EquirectProjection } from "@egjs/react-view360";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "@egjs/react-view360/css/view360.min.css";
+import image360_1 from "../../assets/map-section/panoramic-img/shot-panoramic-composition-living-room.jpg";
+import image360_2 from "../../assets/map-section/panoramic-img/OpenfootageNET_Hotel_low.jpg";
+
+const My360Viewer = ({ id }) => {
+   const viewers = {
+      1: {
+         googleMap: "https://maps.app.goo.gl/eQihYFm9JQN7Uq8s7",
+         imageSrc: image360_1,
+      },
+      2: {
+         googleMap: "https://maps.app.goo.gl/PhdpLKjzk2Lb8mru6",
+         imageSrc: image360_2,
+      },
+   };
+
+   const currentHotspot = viewers[id];
+   if (!currentHotspot) {
+      return (
+         <div className="error-container-360">
+            <p>Viewer with ID {id} not found</p>
+         </div>
+      );
+   }
+
+   const plugins = useMemo(() => [new ControlBar({})], []);
+   const projection = useMemo(
+      () =>
+         new EquirectProjection({
+            src: currentHotspot.imageSrc,
+         }),
+      [currentHotspot.imageSrc],
+   );
+
+   return (
+      <>
+         <div className="container-360">
+            <View360
+               className="is-16by9"
+               plugins={plugins}
+               autoplay={{
+                  delay: 5000,
+                  delayOnMouseLeave: 1000,
+                  speed: -2,
+                  pauseOnHover: true,
+               }}
+               rotate={{
+                  duration: 500,
+                  keyboardScale: [2, 1.5],
+               }}
+               projection={projection}
+            />
+            <a href={currentHotspot.googleMap} target="_blank" rel="noopener noreferrer">
+               <FontAwesomeIcon
+                  icon="fa-solid fa-square-arrow-up-right"
+                  className="icon-right"
+               />
+               Click para ver en GoogleMaps
+            </a>
+         </div>
+      </>
+   );
+};
+
+export default My360Viewer;

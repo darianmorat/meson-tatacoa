@@ -1,0 +1,110 @@
+.home-btn {
+   background-color: var(--home-btn);
+}
+.pool-btn {
+   background-color: var(--pool-btn);
+}
+.prev-btn,
+.next-btn {
+   background-color: var(--nav-btn);
+}
+.reservation-btn {
+   background-color: var(--main-btn);
+}
+.google-maps-btn > a {
+   text-decoration: none;
+   color: white;
+}
+
+/* Rendering model */
+.map-render-container {
+   display: flex;
+   min-height: 520px;
+   gap: 25px;
+}
+
+.scene-container {
+   position: relative;
+   overflow: hidden;
+   box-shadow: var(--main-shadow);
+   border-radius: var(--border-radius);
+   flex: 2;
+}
+
+.viewer-360 {
+   display: flex;
+   flex-direction: column;
+   overflow-y: auto;
+   background-color: white;
+   border-radius: var(--border-radius);
+   box-shadow: var(--secondary-shadow);
+   text-align: justify;
+   padding: 20px;
+   flex: 1;
+   gap: 20px;
+}
+
+.panel-data {
+   text-align: justify;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.canvas {
+   z-index: 100;
+}
+.canvas > div {
+   min-height: 400px;
+}
+
+/* Components preview 360 */
+.container-360 {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.error-container-360 {
+   border: 3px solid #404040;
+   border-radius: 5px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 120px;
+}
+
+/* Navigation btns component */
+.navigation-btns {
+   display: flex;
+   position: absolute;
+   flex-wrap: wrap;
+   bottom: 20px;
+   right: 20px;
+   gap: 10px;
+   background-color: #ffffff;
+   padding: 8px;
+   border-radius: 5px;
+   z-index: 800;
+   box-shadow: var(--main-shadow);
+}
+.navigation-btns > button {
+   display: flex;
+   /* min-width: 60px; */
+   gap: 10px;
+   justify-content: center;
+   align-items: center;
+   flex: 1;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 900px) {
+   .map-render-container {
+      flex-direction: column;
+   }
+   .navigation-btns {
+      bottom: auto;
+      right: auto;
+      width: 100%;
+   }
+}

@@ -1,0 +1,214 @@
+.card-slider-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: end;
+   width: 100%;
+   height: 100%;
+   
+}
+
+/* Card Slider */
+.card-slider {
+   position: relative;
+   width: 100%;
+   height: 380px;
+   margin-top: 1rem;
+   margin-bottom: 3rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+/* Card Styles */
+.card {
+   position: absolute;
+   transition: all 0.5s ease;
+   cursor: pointer;
+}
+
+.card-image {
+   width: 600px;
+   height: 400px;
+   object-fit: cover;
+   border-radius: var(--border-radius);
+   box-shadow: var(--main-shadow);
+}
+
+/* Card Positions */
+.card.active {
+   transform: translateX(0) scale(1);
+   opacity: 1;
+   z-index: 30;
+}
+
+.card.left {
+   transform: translateX(-250px) scale(0.75);
+   opacity: 0.7;
+   z-index: 20;
+}
+
+.card.right {
+   transform: translateX(250px) scale(0.75);
+   opacity: 0.7;
+   z-index: 20;
+}
+
+.card.far-left {
+   transform: translateX(-450px) scale(0.5);
+   opacity: 0.4;
+   z-index: 10;
+}
+
+.card.far-right {
+   transform: translateX(450px) scale(0.5);
+   opacity: 0.4;
+   z-index: 10;
+}
+
+/* Controls */
+.slider-controls {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+}
+
+.control-button {
+   background-color: var(--nav-btn);
+   color: white;
+   border: none;
+   cursor: pointer;
+   font-size: 1.2rem;
+   transition: background-color 0.3s;
+}
+
+/* Indicator Dots */
+.indicator-dots {
+   display: flex;
+   gap: 0.5rem;
+}
+
+.indicator-dot {
+   width: 10px;
+   height: 10px;
+   background-color: var(--inactive-btn);
+   border: none;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.indicator-dot.active {
+   background-color: var(--nav-btn);
+}
+
+.indicator-dot:focus {
+   outline: none;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+   .card-slider {
+      height: 500px;
+   }
+
+   .card-image {
+      width: 380px;
+      height: 260px;
+   }
+
+   .card.left {
+      transform: translateX(-150px) scale(0.75);
+   }
+
+   .card.right {
+      transform: translateX(150px) scale(0.75);
+   }
+
+   .card.far-left {
+      transform: translateX(-260px) scale(0.5);
+   }
+
+   .card.far-right {
+      transform: translateX(260px) scale(0.5);
+   }
+}
+
+@media (max-width: 768px) {
+   .card-slider {
+      height: 400px;
+   }
+
+   .card-image {
+      width: 300px;
+      height: 200px;
+   }
+
+   .card.left {
+      transform: translateX(-100px) scale(0.75);
+   }
+
+   .card.right {
+      transform: translateX(100px) scale(0.75);
+   }
+
+   .card.far-left {
+      transform: translateX(-180px) scale(0.5);
+      opacity: 0.2;
+   }
+
+   .card.far-right {
+      transform: translateX(180px) scale(0.5);
+      opacity: 0.2;
+   }
+}
+
+@media (max-width: 576px) {
+   .slider-section {
+      padding-top: 40px;
+   }
+   .card-slider {
+      height: 280px;
+      margin: 0;
+      margin-top: -25px;
+   }
+
+   .card-image {
+      width: 240px;
+      height: 180px;
+   }
+
+   .card.left {
+      transform: translateX(-70px) scale(0.75);
+      opacity: 0.5;
+   }
+
+   .card.right {
+      transform: translateX(70px) scale(0.75);
+      opacity: 0.5;
+   }
+
+   /* Hide far cards on small screens */
+   .card.far-left,
+   .card.far-right {
+      display: none;
+   }
+
+   /* .slider-controls { */
+   /*    display: none; */
+   /* } */
+
+   .control-button {
+      font-size: 1rem;
+      padding: 6px 12px;
+   }
+
+   .indicator-dot {
+      width: 8px;
+      height: 8px;
+   }
+   .indicator-dots {
+      width: 90px;
+      flex-wrap: wrap;
+   }
+}
