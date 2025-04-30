@@ -20,7 +20,7 @@ import { HOTSPOTS } from "../../data/hotspots";
 // Constants
 const ANIMATION_DURATION = 0.7;
 const CLOSE_TIMEOUT = 200;
-const CAMERA_INITIAL_POSITION = [-4, 0.8, 4];
+const CAMERA_INITIAL_POSITION = [-5, 0.5, 4];
 const CAMERA_FOV = 44;
 
 const MapRender = () => {
