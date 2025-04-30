@@ -1,8 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { HOTSPOTS } from "../../data/hotspots";
+import { HOTSPOTS, POOL_HOTSPOT } from "../../data/hotspots";
+
+const ALL_HOTSPOTS = [...HOTSPOTS, ...POOL_HOTSPOT];
 
 const NavigationBtns = ({ selectedHotspot, handleHotspotClick }) => {
-   const currentIndex = HOTSPOTS.findIndex((h) => h.id === selectedHotspot);
+   const currentIndex = ALL_HOTSPOTS.findIndex((h) => h.id === selectedHotspot);
+
+   const handlePool = () => {
+      handleHotspotClick(POOL_HOTSPOT[0].id);
+   };
 
    const handlePrev = () => {
       const newIndex = currentIndex === 0 ? HOTSPOTS.length - 1 : currentIndex - 1;
@@ -24,7 +30,7 @@ const NavigationBtns = ({ selectedHotspot, handleHotspotClick }) => {
                <FontAwesomeIcon icon="fa-solid fa-home" className="icon-left" />
                Inicio
             </button>
-            <button className="pool-btn" onClick={handleNext}>
+            <button className="pool-btn" onClick={handlePool}>
                <FontAwesomeIcon icon="fa-solid fa-water" className="icon-left" />
                Piscina
             </button>

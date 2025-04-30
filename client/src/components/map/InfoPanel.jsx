@@ -6,16 +6,33 @@ const ViewerPanel = ({ hotspotId, hotspotData, onReservation }) => {
       <div className="viewer-360" style={{ zIndex: 900 }}>
          {hotspotData ? (
             <>
-               <My360Viewer id={hotspotId} />
-               <div className="panel-data">
-                  <div>
-                     <h3>{hotspotData.info.title}</h3>
-                     <p>{hotspotData.info.description}</p>
-                  </div>
-                  <button className="reservation-btn" onClick={onReservation}>
-                     Reservar Habitacion
-                  </button>
-               </div>
+               {hotspotData.category == "pool" ? (
+                  <>
+                     <My360Viewer id={hotspotId} />
+                     <div className="panel-data">
+                        <div>
+                           <h3>{hotspotData.info.title}</h3>
+                           <p>{hotspotData.info.description}</p>
+                        </div>
+                        {/* <button className="reservation-btn" onClick={onReservation}> */}
+                        {/*    Reservar Habitacion */}
+                        {/* </button> */}
+                     </div>
+                  </>
+               ) : (
+                  <>
+                     <My360Viewer id={hotspotId} />
+                     <div className="panel-data">
+                        <div>
+                           <h3>{hotspotData.info.title}</h3>
+                           <p>{hotspotData.info.description}</p>
+                        </div>
+                        <button className="reservation-btn" onClick={onReservation}>
+                           Reservar Habitacion
+                        </button>
+                     </div>
+                  </>
+               )}
             </>
          ) : (
             <>

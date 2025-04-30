@@ -13,6 +13,22 @@ const My360Viewer = ({ id }) => {
       },
       2: {
          googleMap: "https://maps.app.goo.gl/PhdpLKjzk2Lb8mru6",
+         imageSrc: image360_1,
+      },
+      3: {
+         googleMap: "https://maps.app.goo.gl/eQihYFm9JQN7Uq8s7",
+         imageSrc: image360_1,
+      },
+      4: {
+         googleMap: "https://maps.app.goo.gl/eQihYFm9JQN7Uq8s7",
+         imageSrc: image360_1,
+      },
+      5: {
+         googleMap: "https://maps.app.goo.gl/eQihYFm9JQN7Uq8s7",
+         imageSrc: image360_1,
+      },
+      100: {
+         googleMap: "https://maps.app.goo.gl/PhdpLKjzk2Lb8mru6",
          imageSrc: image360_2,
       },
    };

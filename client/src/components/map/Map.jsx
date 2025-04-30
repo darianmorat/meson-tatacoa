@@ -15,7 +15,7 @@ import ViewerPanel from "./InfoPanel";
 import NavigationBtns from "./Navigation";
 
 // Data
-import { HOTSPOTS } from "../../data/hotspots";
+import { ALL_HOTSPOTS } from "../../data/hotspots";
 
 // Constants
 const ANIMATION_DURATION = 0.7;
@@ -32,7 +32,7 @@ const MapRender = () => {
 
    // Selected hotspot data
    const selectedHotspotData = useMemo(() => {
-      return HOTSPOTS.find((h) => h.id === selectedHotspot);
+      return ALL_HOTSPOTS.find((h) => h.id === selectedHotspot);
    }, [selectedHotspot]);
 
    // Camera animation
@@ -50,7 +50,7 @@ const MapRender = () => {
 
    const handleHotspotClick = useCallback(
       (hotspotId) => {
-         const hotspot = HOTSPOTS.find((h) => h.id === hotspotId);
+         const hotspot = ALL_HOTSPOTS.find((h) => h.id === hotspotId);
 
          if (selectedHotspot === hotspotId) {
             // Return to original view
@@ -138,7 +138,7 @@ const MapRender = () => {
                      files={sunset_hdr} // load enviorment
                      environmentRotation={[0, Math.PI / 1, 4]}
                   />
-                  {HOTSPOTS.map((hotspot) => (
+                  {ALL_HOTSPOTS.map((hotspot) => (
                      <Hotspot
                         key={hotspot.id}
                         position={hotspot.position}
