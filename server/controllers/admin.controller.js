@@ -1,13 +1,17 @@
 import pool from "../db/pool.js";
 
-export const getData = async (req, res) => {
+export const getMenu = async (req, res) => {
    try {
-      const result = await pool.query("select * from users");
-      const total = result.rows;
+      const { categoryName } = req.query;
 
-      res.json({ total, message: "server working" });
+      const result = await pool.query(
+         "select * from menu_items where category_id = (select id from categories where name = $1)",
+         [categoryName],
+      );
+      const data = result.rows;
+
+      res.status(200).json({ success: true, data });
    } catch (error) {
-      console.log(error.message);
-      res.status(500).json({ message: "server error" });
+      res.status(500).json({ success: false, message: "server error" });
    }
 };
