@@ -3,7 +3,7 @@ import api from "../api/axios";
 
 export const useMenuStore = create((set) => ({
    menuItems: [],
-   loading: false,
+   loading: false, // loading state can me managed later
 
    fetchMenu: async (categoryName) => {
       try {
@@ -15,9 +15,12 @@ export const useMenuStore = create((set) => ({
 
          if (res.data.success) {
             set({ menuItems: res.data.data, loading: false });
+         } else {
+            set({ menuItems: [], loading: false });
          }
       } catch (e) {
          console.log(e);
+         set({loading: false})
       }
    },
 }));

@@ -3,7 +3,7 @@ import "./menu.css";
 import { useMenuStore } from "../../stores/useMenuStore";
 
 const MenuDisplay = () => {
-   const { menuItems, fetchMenu, loading } = useMenuStore(); // loading state can me managed later
+   const { menuItems, fetchMenu } = useMenuStore();
    const [activeCategory, setActiveCategory] = useState("Principales");
 
    useEffect(() => {
