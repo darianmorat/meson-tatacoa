@@ -15,10 +15,10 @@ function App() {
       <Routes>
          <Route element={<DefaultLayout />}>
             <Route path="/" element={<MainPage />} />
-            <Route path="/reservation" element={<ReservationPage />} />
          </Route>
 
          <Route element={<MinimalLayout />}>
+            <Route path="/reservation" element={<ReservationPage />} />
             <Route path="/secret-panel" element={<SecretPanel />} />
          </Route>
       </Routes>
