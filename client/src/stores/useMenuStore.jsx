@@ -20,7 +20,7 @@ export const useMenuStore = create((set) => ({
          }
       } catch (e) {
          console.log(e);
-         set({loading: false})
+         set({ loading: false });
       }
    },
 }));

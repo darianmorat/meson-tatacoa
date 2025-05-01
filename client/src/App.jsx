@@ -3,21 +3,25 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 
+import DefaultLayout from "./layouts/DefaultLayout";
+import MinimalLayout from "./layouts/MinimalLayout";
+
 import ReservationPage from "./pages/ReservationPage";
-import Navbar from "./components/navbar/Navbar";
+import SecretPanel from "./pages/SecretPanel";
 import MainPage from "./pages/MainPage";
-import Footer from "./components/footer/Footer";
 
 function App() {
    return (
-      <>
-         <Navbar />
-         <Routes>
+      <Routes>
+         <Route element={<DefaultLayout />}>
             <Route path="/" element={<MainPage />} />
             <Route path="/reservation" element={<ReservationPage />} />
-         </Routes>
-         <Footer />
-      </>
+         </Route>
+
+         <Route element={<MinimalLayout />}>
+            <Route path="/secret-panel" element={<SecretPanel />} />
+         </Route>
+      </Routes>
    );
 }
 
