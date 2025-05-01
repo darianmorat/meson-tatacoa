@@ -5,12 +5,7 @@ const { Pool } = pg;
 dotenv.config();
 
 const pool = new Pool({
-   // connectionString: process.env.DATABASE_URL,
-   user: "darianmorat",
-   host: "localhost",
-   database: "tatacoa",
-   password: "2004",
-   port: 5432,
+   connectionString: process.env.DATABASE_URL,
 });
 
 export default pool;
