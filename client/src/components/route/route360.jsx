@@ -18,7 +18,7 @@ const My360Route = () => {
          new EquirectProjection({
             src: video360_1,
             video: {
-               autoplay: true,
+               autoplay: false,
             },
          }),
       [],

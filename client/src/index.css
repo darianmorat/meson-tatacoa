@@ -14,7 +14,7 @@
    --border-radius: 10px;
 
    --fontsize-default: 1rem;
-   --fontsize-title: 1.4rem;
+   --fontsize-title: 2rem;
    --fontsize-medium: 1.2rem;
 }
 
@@ -27,7 +27,7 @@
 }
 
 body {
-   color: #2c3e50;
+   color: #333;
 }
 
 h1,
@@ -64,14 +64,42 @@ button {
    font-weight: 500;
    padding: 12px 20px;
 }
+textarea {
+   resize: none;
+}
 input,
 select,
 textarea {
    padding: 0.75rem;
+   outline: none;
+   border: 1px solid #ccc;
+}
+input:focus,
+select:focus,
+textarea:focus {
+   border-color: #6ad64f;
+   box-shadow: 0 0 5px #00000020;
 }
 
 button:hover {
    filter: brightness(1.1);
+}
+
+.error-message {
+   color: #ff6b6b;
+   margin-left: auto;
+   font-size: 0.9rem;
+   font-weight: 500;
+}
+.error-message::before {
+   content: "*";
+   margin-right: 0.5rem;
+}
+
+input:-webkit-autofill {
+   transition:
+      background-color 600000s 0s,
+      color 600000s 0s;
 }
 
 /* MAIN PAGE */
@@ -83,11 +111,6 @@ button:hover {
 .title-header {
    text-align: center;
    margin-bottom: 30px;
-}
-
-.title-header h2 {
-   color: #333;
-   font-size: 2rem;
 }
 
 .section-container {
@@ -103,19 +126,28 @@ section {
 }
 
 .section-container.slider {
-   background-color: white;
+   background: linear-gradient(135deg, #f9fafb, white);
+   border-bottom: 1px solid #e5e7eb;
 }
+
 .section-container.map {
-   background-color: rgba(0, 0, 0, 0.1);
+   background-color: #f9fafb;
 }
+
 .section-container.restaurant {
    background-color: white;
+   border-top: 1px solid #e5e7eb;
+   border-bottom: 1px solid #e5e7eb;
 }
+
 .section-container.route {
-   background-color: rgba(0, 0, 0, 0.1);
+   background-color: #f9fafb;
+   border-bottom: 1px solid #e5e7eb;
 }
+
 .section-container.museum {
    background-color: white;
+   border-bottom: 1px solid #e5e7eb;
 }
 
 .slider-section,
@@ -128,7 +160,7 @@ section {
 
 /* RESERVATION PAGE */
 .reservation-page {
-   background-color: rgba(0, 0, 0, 0.1);
+   background: linear-gradient(135deg, #fdfcfb, #e2fdf7);
    padding: 40px 20px;
 }
 .reservation-container {
@@ -138,7 +170,14 @@ section {
    background: #fff;
    border-radius: var(--border-radius);
    box-shadow: var(--secondary-shadow);
-   animation: fadeIn 0.6s ease-out;
+   animation: fadeIn 0.5s ease-out;
+}
+
+.reservation-info {
+   border: 1px solid #e5e7eb;
+   border-radius: var(--border-radius);
+   padding: 20px;
+   background-color: #fdfcfb;
 }
 
 .reservation-container h1 {
@@ -160,20 +199,6 @@ section {
 
 .form-group label {
    font-weight: 600;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-   border: 1px solid #ccc;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-   outline: none;
-   border-color: #3498db;
-   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
 }
 
 .date-group {
@@ -215,6 +240,28 @@ section {
    color: #2c3e50;
 }
 
+.success-container {
+   width: 100vw;
+   height: 100vh;
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: linear-gradient(135deg, #fdfcfb, #e2fdf7);
+}
+.success-message {
+   max-width: 500px;
+   padding: 30px;
+   background: #fff;
+   border-radius: var(--border-radius);
+   box-shadow: var(--secondary-shadow);
+   text-align: center;
+}
+
+.success-message h2 {
+   margin-bottom: 16px;
+}
+
 /* SECRET PAGE */
 .secret-panel-container {
    position: relative;
@@ -251,7 +298,7 @@ section {
    max-width: 450px;
    text-align: center;
    box-shadow: var(--secondary-shadow);
-   animation: fadeIn 0.6s ease-out;
+   animation: fadeIn 0.5s ease-out;
 }
 
 .secret-panel-form h1 {
@@ -267,26 +314,22 @@ section {
    margin-bottom: 1.5rem;
 }
 
-input[type="password"] {
+.secret-password {
    width: 100%;
    background: rgba(255, 255, 255, 0.3);
    font-size: 1rem;
+   color: white;
    outline: none;
+   border: 1px solid transparent;
 }
 
-input[type="password"]:focus {
-   border-color: #4cc9f0;
+.secret-password::placeholder {
+   color: #ccc;
 }
 
 .unlock-button {
    width: 100%;
-   background: #44b2d5;
-}
-
-.error-message {
-   color: #ff6b6b;
-   margin-top: 0.5rem;
-   font-size: 0.9rem;
+   background: var(--main-btn);
 }
 
 @keyframes fadeIn {

@@ -2,7 +2,6 @@
 import React, { Suspense, useRef, useState, useCallback, useMemo } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera, Environment } from "@react-three/drei";
-import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import sunset_hdr from "../../assets/map-section/texture-img/sunset.hdr";
 import "./map.css";
@@ -28,7 +27,6 @@ const MapRender = () => {
 
    const controlsRef = useRef();
    const cameraRef = useRef();
-   const navigate = useNavigate();
 
    // Selected hotspot data
    const selectedHotspotData = useMemo(() => {
@@ -104,8 +102,11 @@ const MapRender = () => {
    );
 
    const handleReservationClick = useCallback(() => {
-      navigate("/reservation");
-   }, [navigate]);
+      const reservationData = encodeURIComponent(
+         JSON.stringify(selectedHotspotData.info),
+      );
+      window.open(`/reservation?data=${reservationData}`, "_blank");
+   }, [selectedHotspotData]);
 
    return (
       <div className="map-render-container">
