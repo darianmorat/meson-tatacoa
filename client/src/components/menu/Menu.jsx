@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import "./menu.css";
-import { useMenuStore } from "../../stores/useMenuStore";
+import { usePublicStore } from "../../stores/usePublicStore";
 
 const MenuDisplay = () => {
-   const { menuItems, fetchMenu } = useMenuStore();
+   const { menuItems, fetchMenu } = usePublicStore();
    const [activeCategory, setActiveCategory] = useState("Principales");
 
    useEffect(() => {
