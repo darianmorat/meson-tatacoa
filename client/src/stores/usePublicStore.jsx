@@ -1,15 +1,16 @@
 import { create } from "zustand";
 import api from "../api/axios";
 
-export const useMenuStore = create((set) => ({
+export const usePublicStore = create((set) => ({
    menuItems: [],
-   loading: false, // loading state can me managed later
+   // sliderImgs: [], // first finish the menu items one and then add the others
+   loading: false, // loading state can me managed later as features
 
    fetchMenu: async (categoryName) => {
       try {
          set({ loading: true });
 
-         const res = await api.get("/admin", {
+         const res = await api.get("/public/menu", {
             params: { categoryName },
          });
 
