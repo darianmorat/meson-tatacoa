@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { HOTSPOTS, POOL_HOTSPOT } from "../../data/hotspots";
+import { useState } from "react";
 
 const ALL_HOTSPOTS = [...HOTSPOTS, ...POOL_HOTSPOT];
 
@@ -20,27 +21,66 @@ const NavigationBtns = ({ selectedHotspot, handleHotspotClick }) => {
       handleHotspotClick(HOTSPOTS[newIndex].id);
    };
 
+   const [isFullscreen, setIsFullscreen] = useState(false);
+
+   const toggleFullscreen = () => {
+      const container = document.querySelector(".scene-container");
+      if (!isFullscreen) {
+         container?.requestFullscreen?.().then(() => setIsFullscreen(true));
+      } else {
+         document.exitFullscreen?.().then(() => setIsFullscreen(false));
+      }
+   };
+
    return (
       <>
+         <div className="actions-btns">
+            <button
+               className="home-btn"
+               onClick={() => handleHotspotClick(selectedHotspot)}
+               aria-label="Inicio"
+               title="Inicio"
+            >
+               <FontAwesomeIcon icon="fa-solid fa-home" />
+            </button>
+            <button
+               className="fullscreen-btn"
+               onClick={toggleFullscreen}
+               aria-label={
+                  isFullscreen ? "Salir de pantalla completa" : "Pantalla completa"
+               }
+               title={isFullscreen ? "Modo ventana" : "Pantalla completa"}
+            >
+               <FontAwesomeIcon
+                  icon={isFullscreen ? "fa-solid fa-compress" : "fa-solid fa-expand"}
+               />
+            </button>
+         </div>
+
          <div className="navigation-btns">
             <button
-               onClick={() => handleHotspotClick(selectedHotspot)}
-               className="home-btn"
+               className="pool-btn"
+               onClick={handlePool}
+               aria-label="Piscina"
+               title="Piscina "
             >
-               <FontAwesomeIcon icon="fa-solid fa-home" className="icon-left" />
-               Inicio
+               <FontAwesomeIcon icon="fa-solid fa-water" />
             </button>
-            <button className="pool-btn" onClick={handlePool}>
-               <FontAwesomeIcon icon="fa-solid fa-water" className="icon-left" />
-               Piscina
+            <button
+               className="prev-btn"
+               onClick={handlePrev}
+               aria-label="Anterior"
+               title="Anterior"
+            >
+               <FontAwesomeIcon icon="fa-solid fa-chevron-left" />
             </button>
-            <button className="prev-btn" onClick={handlePrev}>
-               <FontAwesomeIcon icon="fa-solid fa-angle-left" className="icon-left" />
-               Prev
-            </button>
-            <button className="next-btn" onClick={handleNext}>
-               Next
-               <FontAwesomeIcon icon="fa-solid fa-angle-right" className="icon-right" />
+            <button
+               className="next-btn"
+               onClick={handleNext}
+               aria-label="Siguiente"
+               title="Siguiente"
+            >
+               <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
             </button>
          </div>
       </>

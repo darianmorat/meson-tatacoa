@@ -143,6 +143,7 @@ const MapRender = () => {
                      <Hotspot
                         key={hotspot.id}
                         position={hotspot.position}
+                        category={hotspot.category}
                         isSelected={selectedHotspot === hotspot.id}
                         onClick={() => handleHotspotClick(hotspot.id)}
                      />
