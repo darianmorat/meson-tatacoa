@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-import sceneUrl from "../../models/Meson de la tatacoa.glb?url";
+import sceneUrl from "../../assets/map-section/models/Meson de la tatacoa.glb?url";
 
 const Model = () => {
    const { scene } = useGLTF(sceneUrl);
