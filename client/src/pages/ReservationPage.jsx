@@ -85,6 +85,7 @@ const ReservationPage = () => {
                      name="name"
                      id="name"
                      placeholder="John Martinez"
+                     autoFocus
                      {...register("name", {
                         required: "Nombre es obligatorio",
                         minLength: {
@@ -124,6 +125,7 @@ const ReservationPage = () => {
                   <label htmlFor="phone">Número de Celular</label>
                   <input
                      type="tel"
+                     name="phone"
                      id="phone"
                      placeholder="1234567890"
                      {...register("phone", {
@@ -192,12 +194,13 @@ const ReservationPage = () => {
                      })}
                   >
                      {[
-                        "1 persona",
-                        "2 personas",
-                        "3 personas",
-                        "4 personas",
-                        "5 personas",
-                        "6 personas",
+                        "1 Uno",
+                        "2 Dos",
+                        "3 Tres",
+                        "4 Cuatro",
+                        "5 Cinco",
+                        "6 Seis",
+                        "# Muchos (Solicitud especial)",
                      ].map((num) => (
                         <option key={num} value={num}>
                            {num}

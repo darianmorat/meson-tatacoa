@@ -1,5 +1,5 @@
 import MapRender from "../components/map/Map";
-import MenuDisplay from "../components/restaurantMenu/Menu";
+import MenuDisplay from "../components/menu/Menu";
 import My360Route from "../components/route/route360";
 import BackgroundSlider from "../components/slider/Slider";
 
@@ -21,7 +21,7 @@ const MainPage = () => {
             <div className="section-container map">
                <section id="map" className="map-section">
                   <header className="title-header">
-                     <h2>Alojamiento</h2>
+                     <h2>Hospedaje</h2>
                      <p>Mapa 360 - Novedad y usabilidad</p>
                   </header>
                   <MapRender />
