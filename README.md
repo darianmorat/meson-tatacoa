@@ -48,6 +48,13 @@ npm run dev
 cd client && npm run dev
 ```
 
+## Documentation
+
+Explore detailed guides in the /docs folder:
+
+- **API Reference** (`/docs/API.md`):
+- **System Diagrams** (`/docs/Diagrams/`):
+
 ## License
 
 Proprietary software. All rights reserved  
