@@ -14,6 +14,18 @@
    --fontsize-default: 1rem;
    --fontsize-title: 2rem;
    --fontsize-medium: 1.2rem;
+
+   /* footer styles */
+   /* change this later */
+   --primary-color: #007bff;
+   --primary-dark: #007bff;
+   --text-color: #333333;
+   --light-text: #ffffff;
+   --light-gray: #f5f5f7;
+   --dark-gray: #1a1a2e;
+   --medium-gray: #666666;
+   --border-color: #e2e2e2;
+   --transition: all 0.1s ease;
 }
 
 * {
