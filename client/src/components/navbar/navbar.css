@@ -5,7 +5,7 @@
    position: sticky;
    top: 0;
    z-index: 999;
-   background-color: white;
+   background-color: #f9fafb;
 }
 
 .navbar-container {
@@ -15,7 +15,7 @@
    width: 100%;
    align-items: center;
    padding: 10px 20px;
-   background: white;
+   background-color: #f9fafb;
 }
 
 .navbar-logo img {
@@ -73,7 +73,7 @@
       height: 100vh;
       padding: 80px 20px 30px;
       gap: 2rem;
-      transition: right 0.3s ease;
+      transition: right 0.2s ease;
       box-shadow: var(--secondary-shadow);
       align-items: center;
    }

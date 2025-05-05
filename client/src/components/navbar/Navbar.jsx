@@ -38,7 +38,7 @@ const Navbar = () => {
             <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
                <li>
                   <a href="#map" onClick={closeMenu}>
-                     Alojamiento
+                     Hospedaje
                   </a>
                </li>
                <li>
