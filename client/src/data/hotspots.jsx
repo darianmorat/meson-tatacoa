@@ -1,7 +1,7 @@
 export const POOL_HOTSPOT = [
    {
       id: 100,
-      category: 'pool',
+      category: "pool",
       position: [-0.93, -0.52, -1.29],
       info: {
          title: "PISCINA",
@@ -14,6 +14,7 @@ export const POOL_HOTSPOT = [
 export const HOTSPOTS = [
    {
       id: 1,
+      category: "reservation",
       position: [-0.9, -0.42, 0.1],
       info: {
          title: "LOCALIDAD #1",
@@ -23,6 +24,7 @@ export const HOTSPOTS = [
    },
    {
       id: 2,
+      category: "reservation",
       position: [-0.8, -0.4, 0.7],
       info: {
          title: "LOCALIDAD #2",
@@ -32,6 +34,7 @@ export const HOTSPOTS = [
    },
    {
       id: 3,
+      category: "reservation",
       position: [-0.15, -0.38, 1.15],
       info: {
          title: "LOCALIDAD #3",
@@ -41,6 +44,7 @@ export const HOTSPOTS = [
    },
    {
       id: 4,
+      category: "reservation",
       position: [-2.0, -0.48, -0.15],
       info: {
          title: "LOCALIDAD #4",
@@ -50,6 +54,7 @@ export const HOTSPOTS = [
    },
    {
       id: 5,
+      category: "reservation",
       position: [1.1, -0.28, 0.7],
       info: {
          title: "LOCALIDAD #5",
