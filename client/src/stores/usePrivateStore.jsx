@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { toast } from "react-toastify";
 import api from "../api/axios";
 
-export const usePrivateStore = create((set, get) => ({
+export const usePrivateStore = create((set) => ({
    isAuth: false,
    checkingAuth: true,
 
@@ -18,7 +18,6 @@ export const usePrivateStore = create((set, get) => ({
             localStorage.setItem("token", res.data.token);
             set({ isAuth: true });
             toast.success(res.data.message);
-            return true;
          }
       } catch (e) {
          toast.error(e.response.data.message);
@@ -28,18 +27,18 @@ export const usePrivateStore = create((set, get) => ({
    logout: () => {
       localStorage.removeItem("token");
       set({ isAuth: false, checkingAuth: false });
+      toast.success("Sesion cerrada");
    },
 
    checkAuth: async () => {
       const token = localStorage.getItem("token");
 
       if (!token) {
-         set({ isAuth: false, checkingAuth: false });
-         return false;
+         set({ checkingAuth: false });
+         return;
       }
 
       set({ checkingAuth: true });
-
       try {
          const config = {
             headers: {
@@ -51,14 +50,11 @@ export const usePrivateStore = create((set, get) => ({
 
          if (res.data.success) {
             set({ isAuth: true, checkingAuth: false });
-            return true;
-         } else {
-            get().logout();
-            return false;
          }
       } catch (e) {
-         get().logout();
-         console.log(e.response.data.message);
+         localStorage.removeItem("token");
+         set({ isAuth: false, checkingAuth: false });
+         toast.error(e.response.data.message);
       }
    },
 }));

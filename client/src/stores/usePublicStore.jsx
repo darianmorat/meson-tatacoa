@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import api from "../api/axios";
+import { toast } from "react-toastify";
 
 export const usePublicStore = create((set) => ({
    menuItems: [],
@@ -16,12 +17,10 @@ export const usePublicStore = create((set) => ({
 
          if (res.data.success) {
             set({ menuItems: res.data.data, loading: false });
-         } else {
-            set({ menuItems: [], loading: false });
          }
       } catch (e) {
-         console.log(e);
          set({ loading: false });
+         toast.error(e.response.data.message);
       }
    },
 }));
