@@ -1,0 +1,71 @@
+/* Container styles */
+.app {
+   display: grid;
+   place-items: center;
+   height: 100vh;
+   background-color: #f9fafb;
+}
+
+/* Shared spinner styles */
+.loader,
+.loader-2 {
+   --color: #357;
+   --speed: 0.9s;
+
+   border-style: solid;
+   border-radius: 50%;
+   position: absolute;
+   animation: rotate var(--speed) linear infinite;
+}
+
+/* Outer spinner (larger, rotates counter-clockwise) */
+.loader {
+   --size: 7em;
+
+   width: var(--size);
+   aspect-ratio: 1;
+   border-width: calc(var(--size) * 0.172);
+   border-color: var(--color) rgba(51, 85, 119, 0.1) rgba(51, 85, 119, 0.1) var(--color);
+   animation-direction: reverse; /* Rotates opposite direction */
+}
+
+/* Inner spinner (smaller, rotates clockwise) */
+.loader-2 {
+   --size: 3em;
+
+   width: var(--size);
+   aspect-ratio: 1;
+   border-width: calc(var(--size) * 0.172);
+   border-color: var(--color) rgba(51, 85, 119, 0.1) rgba(51, 85, 119, 0.1) var(--color);
+}
+
+/* Dot styles for both spinners */
+.loader::before,
+.loader::after,
+.loader-2::before,
+.loader-2::after {
+   content: "";
+   position: absolute;
+   background: var(--color);
+   width: calc(var(--size) * 0.172);
+   aspect-ratio: 1;
+   border-radius: 50%;
+}
+
+.loader::before,
+.loader-2::before {
+   top: 0;
+   right: 0;
+}
+.loader::after,
+.loader-2::after {
+   bottom: 0;
+   left: 0;
+}
+
+/* Animation */
+@keyframes rotate {
+   to {
+      transform: rotate(360deg);
+   }
+}
