@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useLocation } from "react-router-dom";
+import styles from "./Reservation.module.css";
 
 const ReservationPage = () => {
    const [reservationInfo, setReservationInfo] = useState(null);
@@ -57,8 +58,8 @@ const ReservationPage = () => {
 
    if (isSubmitted) {
       return (
-         <div className="success-container">
-            <div className="success-message">
+         <div className={styles.successContainer}>
+            <div className={styles.successMessage}>
                <h2>Reserva Recibida</h2>
                <p>Gracias por tu reserva. Puedes cerrar esta ventana.</p>
                <p>Nos pondremos en contacto contigo pronto.</p>
@@ -68,17 +69,17 @@ const ReservationPage = () => {
    }
 
    return (
-      <div className="reservation-page">
-         <div className="reservation-container">
+      <div className={styles.reservation}>
+         <div className={styles.container}>
             <h1>Formulario de Reserva</h1>
-            <form className="reservation-form" onSubmit={handleSubmit(onSubmit)}>
+            <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
                {reservationInfo && (
-                  <div className="reservation-info">
+                  <div className={styles.reservationInfo}>
                      <h3>{reservationInfo.title}</h3>
                      <p>{reservationInfo.description}</p>
                   </div>
                )}
-               <div className="form-group">
+               <div className={styles.formGroup}>
                   <label htmlFor="name">Nombre Completo</label>
                   <input
                      type="text"
@@ -101,7 +102,7 @@ const ReservationPage = () => {
                   {errors.name && <p className="error-message">{errors.name.message}</p>}
                </div>
 
-               <div className="form-group">
+               <div className={styles.formGroup}>
                   <label htmlFor="email">Correo Electronico</label>
                   <input
                      type="email"
@@ -121,7 +122,7 @@ const ReservationPage = () => {
                   )}
                </div>
 
-               <div className="form-group">
+               <div className={styles.formGroup}>
                   <label htmlFor="phone">Número de Celular</label>
                   <input
                      type="tel"
@@ -141,8 +142,8 @@ const ReservationPage = () => {
                   )}
                </div>
 
-               <div className="date-group">
-                  <div className="form-group">
+               <div className={styles.dateGroup}>
+                  <div className={styles.formGroup}>
                      <label htmlFor="checkIn">Fecha de entrada</label>
                      <input
                         type="date"
@@ -162,7 +163,7 @@ const ReservationPage = () => {
                      )}
                   </div>
 
-                  <div className="form-group">
+                  <div className={styles.formGroup}>
                      <label htmlFor="checkOut">Fecha de salida</label>
                      <input
                         type="date"
@@ -185,7 +186,7 @@ const ReservationPage = () => {
                   </div>
                </div>
 
-               <div className="form-group">
+               <div className={styles.formGroup}>
                   <label htmlFor="guests">Número de Invitados</label>
                   <select
                      id="guests"
@@ -212,7 +213,7 @@ const ReservationPage = () => {
                   )}
                </div>
 
-               <div className="form-group">
+               <div className={styles.formGroup}>
                   <label htmlFor="specialRequests">Solicitudes Especiales</label>
                   <textarea
                      id="specialRequests"
@@ -230,7 +231,7 @@ const ReservationPage = () => {
                   )}
                </div>
 
-               <button type="submit" className="submit-btn">
+               <button type="submit" className={styles.submitBtn}>
                   Completar Reserva
                </button>
             </form>

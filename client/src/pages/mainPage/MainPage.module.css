@@ -1,0 +1,52 @@
+.mainPage {
+   position: relative;
+   overflow: hidden;
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+
+   & div {
+      & section {
+         padding: 80px 20px;
+         max-width: 1200px;
+         text-align: center;
+         margin: 0 auto;
+
+         .titleHeader {
+            text-align: center;
+            margin-bottom: 30px;
+         }
+      }
+   }
+}
+
+.slider {
+   background-color: var(--bg-color-primary);
+   border-bottom: 1px solid #e5e7eb;
+
+   & .sliderSection {
+      padding: 40px 20px 80px;
+   }
+}
+
+.map {
+   background-color: var(--bg-color-secondary);
+}
+
+.restaurant {
+   background-color: var(--bg-color-primary);
+   border-top: 1px solid #e5e7eb;
+   border-bottom: 1px solid #e5e7eb;
+}
+
+.route {
+   background-color: var(--bg-color-secondary);
+   border-bottom: 1px solid #e5e7eb;
+}
+
+.museum {
+   background-color: var(--bg-color-primary);
+   border-bottom: 1px solid #e5e7eb;
+}

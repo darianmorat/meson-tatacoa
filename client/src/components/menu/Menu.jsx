@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import "./menu.css";
 import { usePublicStore } from "../../stores/usePublicStore";
+import styles from "./Menu.module.css";
 
 const MenuDisplay = () => {
    const { menuItems, fetchMenu } = usePublicStore();
@@ -15,34 +15,34 @@ const MenuDisplay = () => {
    };
 
    return (
-      <div className="menu-display">
-         <div className="category-tabs">
+      <div className={styles.menu}>
+         <div className={styles.categoryTabs}>
             <button
-               className={`tab-btn ${activeCategory === "Principales" ? "active" : ""}`}
+               className={`${styles.tabBtn} ${activeCategory === "Principales" ? styles.active : ""}`}
                onClick={() => handleCategoryClick("Principales")}
             >
                Principales
             </button>
             <button
-               className={`tab-btn ${activeCategory === "Postres" ? "active" : ""}`}
+               className={`${styles.tabBtn} ${activeCategory === "Postres" ? styles.active : ""}`}
                onClick={() => handleCategoryClick("Postres")}
             >
                Postres
             </button>
          </div>
 
-         <div className="menu-items">
+         <div className={styles.menuItems}>
             {menuItems.length > 0 ? (
                <>
                   {menuItems.map((item) => (
-                     <div key={item.id} className="menu-item">
-                        <div className="item-image">
+                     <div key={item.id} className={styles.menuItem}>
+                        <div className={styles.itemImage}>
                            <img src={item.image_url} alt={item.name} />
                         </div>
-                        <div className="item-info">
+                        <div className={styles.itemInfo}>
                            <h3>{item.name}</h3>
-                           <p className="item-price">${item.price}</p>
-                           <p className="item-desc">{item.description}</p>
+                           <p className={styles.itemPrice}>${item.price}</p>
+                           <p className={styles.itemDesc}>{item.description}</p>
                         </div>
                      </div>
                   ))}

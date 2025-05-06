@@ -1,7 +1,7 @@
 import React from "react";
 import { useLoader } from "@react-three/fiber";
 import { BackSide, TextureLoader } from "three";
-import enviromentImg1 from "../../assets/map-section/texture-img/eso0932a.jpg";
+import enviromentImg1 from "../../../assets/map-section/texture-img/eso0932a.jpg";
 
 const Skybox = ({ backgroundImage = enviromentImg1 }) => {
    const texture = useLoader(TextureLoader, backgroundImage);

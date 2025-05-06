@@ -1,0 +1,36 @@
+.route360 {
+   display: flex;
+   min-height: 520px;
+   gap: 25px;
+}
+.container {
+   display: flex;
+   flex: 2;
+}
+.is16by9 {
+   width: 100%;
+   box-shadow: var(--shadow-lg);
+   border-radius: var(--border-radius-md);
+}
+
+.description {
+   display: flex;
+   flex-direction: column;
+   overflow-y: auto;
+   background-color: white;
+   border-radius: var(--border-radius-md);
+   box-shadow: var(--shadow-sm);
+   text-align: justify;
+   padding: 20px;
+   gap: 20px;
+   flex: 1;
+}
+
+@media (max-width: 900px) {
+   .is16by9 {
+      height: 380px;
+   }
+   .route360 {
+      flex-direction: column;
+   }
+}

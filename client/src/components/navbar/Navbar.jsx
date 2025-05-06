@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo from "../../assets/logo.png";
-import "./navbar.css";
+import styles from "./Navbar.module.css";
+import { MenuBtn } from "../menuBtn/MenuBtn";
 
 const Navbar = () => {
    const [menuOpen, setMenuOpen] = useState(false);
@@ -9,45 +10,28 @@ const Navbar = () => {
       window.scrollTo(0, 0);
    };
 
-   const toggleMenu = () => {
-      setMenuOpen(!menuOpen);
-   };
-
-   const closeMenu = () => {
-      setMenuOpen(false);
-   };
-
    return (
-      <nav className="navbar">
-         <div className="navbar-container">
-            <div className="navbar-logo">
+      <nav className={styles.navbar}>
+         <div className={styles.container}>
+            <div className={styles.navbarLogo}>
                <img src={logo} alt="Logo" onClick={scrollToTop} />
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-               className={`mobile-menu-button ${menuOpen ? "open" : ""}`}
-               onClick={toggleMenu}
-               aria-label="Toggle mobile menu"
-            >
-               <span className="mobile-menu-icon"></span>
-               <span className="mobile-menu-icon"></span>
-               <span className="mobile-menu-icon"></span>
-            </button>
+            <MenuBtn menuOpen={menuOpen} onClick={() => setMenuOpen(!menuOpen)} />
 
-            <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
+            <ul className={`${styles.navbarLinks} ${menuOpen ? styles.open : ""}`}>
                <li>
-                  <a href="#map" onClick={closeMenu}>
+                  <a href="#map" onClick={() => setMenuOpen(false)}>
                      Hospedaje
                   </a>
                </li>
                <li>
-                  <a href="#restaurant" onClick={closeMenu}>
+                  <a href="#restaurant" onClick={() => setMenuOpen(false)}>
                      Restaurante
                   </a>
                </li>
                <li>
-                  <a href="#mega-fauna" onClick={closeMenu}>
+                  <a href="#mega-fauna" onClick={() => setMenuOpen(false)}>
                      Mega-Fauna
                   </a>
                </li>

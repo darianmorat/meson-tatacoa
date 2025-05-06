@@ -8,12 +8,12 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import DefaultLayout from "./layouts/DefaultLayout";
 import MinimalLayout from "./layouts/MinimalLayout";
 
-import MainPage from "./pages/MainPage";
-import ReservationPage from "./pages/ReservationPage";
-import SecretPanelPage from "./pages/SecretPanelPage";
-import DashboardPage from "./pages/DashboardPage";
-import { usePrivateStore } from "./stores/usePrivateStore";
+import MainPage from "./pages/mainPage/MainPage";
+import ReservationPage from "./pages/reservation/Reservation";
+import SecretPanelPage from "./pages/secretPanel/SecretPanel";
+import DashboardPage from "./pages/dashboard/Dashboard";
 
+import { usePrivateStore } from "./stores/usePrivateStore";
 import { LoadingSpinner } from "./components/loadingSpinner/LoadingSpinner";
 
 function App() {
@@ -31,11 +31,7 @@ function App() {
    }, [checkAuth]);
 
    if (checkingAuth || showLoader) {
-      return (
-         <div className="app">
-            <LoadingSpinner />
-         </div>
-      );
+      return <LoadingSpinner />;
    }
 
    return (

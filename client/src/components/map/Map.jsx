@@ -4,14 +4,14 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera, Environment } from "@react-three/drei";
 import gsap from "gsap";
 import sunset_hdr from "../../assets/map-section/texture-img/sunset.hdr";
-import "./map.css";
+import styles from "./Map.module.css";
 
 // Components
-import Model from "./Model";
-import Hotspot from "./Hotspots";
-import Skybox from "./Skybox";
-import ViewerPanel from "./InfoPanel";
-import NavigationBtns from "./Navigation";
+import Model from "./model/Model";
+import Hotspot from "./hotspots/Hotspots";
+import Skybox from "./skybox/Skybox";
+import ViewerPanel from "./infoPanel/InfoPanel";
+import NavigationBtns from "./navigation/NavBtns";
 
 // Data
 import { ALL_HOTSPOTS } from "../../data/hotspots";
@@ -109,20 +109,21 @@ const MapRender = () => {
    }, [selectedHotspotData]);
 
    return (
-      <div className="map-render-container">
+      <div className={styles.mapRender}>
          <ViewerPanel
             hotspotId={selectedHotspot}
             hotspotData={selectedHotspotData}
             onReservation={handleReservationClick}
          />
 
-         <div className="scene-container">
+         <div className={styles.sceneContainer}>
             <NavigationBtns
+               sceneContainerClass={styles.sceneContainer}
                selectedHotspot={selectedHotspot}
                handleHotspotClick={handleHotspotClick}
             />
 
-            <Canvas className="canvas">
+            <Canvas className={styles.canvas} style={{ zIndex: 100 }}>
                <PerspectiveCamera
                   makeDefault
                   position={CAMERA_INITIAL_POSITION}

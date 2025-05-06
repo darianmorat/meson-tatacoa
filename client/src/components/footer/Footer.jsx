@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./footer.css";
+import logo from "../../assets/logo.png";
+import styles from "./Footer.module.css";
 
 const Footer = () => {
    const currentYear = new Date().getFullYear();
@@ -11,28 +11,28 @@ const Footer = () => {
    };
 
    return (
-      <footer className="footer">
-         <div className="footer-container">
-            <div className="footer-content">
-               <div className="footer-section logo">
-                  <Link to="/" className="footer-logo" onClick={scrollToTop}>
-                     <img src={logo} alt="logo" className="footer-logo" />
+      <footer className={styles.footer}>
+         <div className={styles.container}>
+            <div className={styles.content}>
+               <div className={styles.sectionLogo}>
+                  <Link to="/" onClick={scrollToTop}>
+                     <img src={logo} alt="logo" className={styles.logo} />
                   </Link>
-                  <p className="footer-description">
+                  <p className={styles.description}>
                      Lugar propicio para desarollo de actividades turísticas ubicado en la
                      vereda Libano Cabuyal Mpio Villavieja Huila, corazón del desierto La
                      Tatacoa.
                   </p>
                </div>
 
-               <div className="data-container">
-                  <div className="footer-section">
-                     <h3 className="footer-heading">Enlaces</h3>
-                     <ul className="footer-links">
+               <div className={styles.sectionData}>
+                  <div>
+                     <h3 className={styles.heading}>Enlaces</h3>
+                     <ul className={styles.navLinks}>
                         <li>
                            <FontAwesomeIcon
                               icon="fa-solid fa-paperclip"
-                              className="icons"
+                              className={styles.icon}
                            />
                            <Link to="/" onClick={scrollToTop}>
                               Ir a inicio
@@ -41,27 +41,27 @@ const Footer = () => {
                         <li>
                            <FontAwesomeIcon
                               icon="fa-solid fa-paperclip"
-                              className="icons"
+                              className={styles.icon}
                            />
                            <Link to="#">Sobre nosotros</Link>
                         </li>
                         <li>
                            <FontAwesomeIcon
                               icon="fa-solid fa-paperclip"
-                              className="icons"
+                              className={styles.icon}
                            />
                            <Link to="#">Otros servicios</Link>
                         </li>
                      </ul>
                   </div>
 
-                  <div className="footer-section">
-                     <h3 className="footer-heading">Contacto</h3>
-                     <ul className="footer-contact">
+                  <div>
+                     <h3 className={styles.heading}>Contacto</h3>
+                     <ul className={styles.contact}>
                         <li>
                            <FontAwesomeIcon
                               icon="fa-solid fa-phone-volume"
-                              className="icons"
+                              className={styles.icon}
                            />
                            <a
                               href="https://web.whatsapp.com/send?phone=111111111&text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios%21"
@@ -74,7 +74,7 @@ const Footer = () => {
                         <li>
                            <FontAwesomeIcon
                               icon="fa-brands fa-square-instagram"
-                              className="icons"
+                              className={styles.icon}
                            />
                            <a
                               href="https://www.instagram.com/mesondelatatacoa/"
@@ -86,7 +86,7 @@ const Footer = () => {
                         <li>
                            <FontAwesomeIcon
                               icon="fa-solid fa-envelope"
-                              className="icons"
+                              className={styles.icon}
                            />
                            <Link to="mailto:mesondelatatacoa@gmail.com">
                               mesontatacoa@gmail.com
@@ -97,9 +97,9 @@ const Footer = () => {
                </div>
             </div>
 
-            <div className="footer-bottom">
+            <div className={styles.sectionBottom}>
                <p>&copy; {currentYear}. Todos los derechos reservados.</p>
-               <div className="footer-legal">
+               <div className={styles.legalLinks}>
                   <Link to="#">Política de Privacidad</Link>
                   <Link to="#">Términos de Servicio</Link>
                </div>

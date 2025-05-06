@@ -1,0 +1,41 @@
+.actionBtns,
+.navBtns {
+   position: absolute;
+   display: flex;
+   gap: 10px;
+   z-index: 900;
+
+   & button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 55px;
+      box-shadow: var(--shadow-lg);
+      background: #70707050;
+      backdrop-filter: blur(5px);
+   }
+}
+
+.actionBtns {
+   top: 10px;
+   left: 10px;
+}
+.navBtns {
+   bottom: 10px;
+   right: 10px;
+}
+
+/* FULLSCREEN */
+:fullscreen .actionBtns {
+   top: 20px;
+   left: 20px;
+}
+:fullscreen .navBtns {
+   bottom: 20px;
+   right: 20px;
+}
+
+:fullscreen {
+   border-radius: 0;
+}

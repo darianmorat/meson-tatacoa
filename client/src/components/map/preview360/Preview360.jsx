@@ -1,9 +1,10 @@
 import React, { useMemo } from "react";
 import View360, { ControlBar, EquirectProjection } from "@egjs/react-view360";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import image360_1 from "../../../assets/map-section/panoramic-img/shot-panoramic-composition-living-room.jpg";
+import image360_2 from "../../../assets/map-section/panoramic-img/OpenfootageNET_Hotel_low.jpg";
 import "@egjs/react-view360/css/view360.min.css";
-import image360_1 from "../../assets/map-section/panoramic-img/shot-panoramic-composition-living-room.jpg";
-import image360_2 from "../../assets/map-section/panoramic-img/OpenfootageNET_Hotel_low.jpg";
+import styles from "./Preview360.module.css";
 
 const My360Viewer = ({ id }) => {
    const viewers = {
@@ -36,7 +37,7 @@ const My360Viewer = ({ id }) => {
    const currentHotspot = viewers[id];
    if (!currentHotspot) {
       return (
-         <div className="error-container-360">
+         <div className={styles.errorContainer360}>
             <p>Viewer with ID {id} not found</p>
          </div>
       );
@@ -53,9 +54,9 @@ const My360Viewer = ({ id }) => {
 
    return (
       <>
-         <div className="container-360">
+         <div className={styles.container360}>
             <View360
-               className="is-16by9"
+               className={styles.is16by9}
                plugins={plugins}
                autoplay={{
                   delay: 5000,

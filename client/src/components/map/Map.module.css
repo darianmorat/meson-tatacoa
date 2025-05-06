@@ -1,0 +1,33 @@
+.mapRender {
+   display: flex;
+   min-height: 520px;
+   gap: 25px;
+}
+
+.sceneContainer {
+   position: relative;
+   overflow: hidden;
+   box-shadow: var(--shadow-lg);
+   border-radius: var(--border-radius-md);
+   flex: 2;
+   height: 520px;
+
+   &.canvas {
+      & div {
+         min-height: 400px;
+      }
+   }
+}
+
+/* MEDIA QUERIES */
+@media (width < 900px) {
+   .mapRender {
+      flex-direction: column-reverse;
+      min-height: auto;
+   }
+
+   .sceneContainer {
+      height: 380px;
+      flex: none;
+   }
+}

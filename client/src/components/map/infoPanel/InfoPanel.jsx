@@ -1,15 +1,16 @@
 import React from "react";
-import My360Viewer from "./Preview360";
+import My360Viewer from "../preview360/Preview360";
+import styles from "./InfoPanel.module.css";
 
 const ViewerPanel = ({ hotspotId, hotspotData, onReservation }) => {
    return (
-      <div className="viewer-360" style={{ zIndex: 900 }}>
+      <div className={styles.viewer360}>
          {hotspotData ? (
             <>
                {hotspotData.category == "pool" ? (
                   <>
                      <My360Viewer id={hotspotId} />
-                     <div className="panel-data">
+                     <div className={styles.panelData}>
                         <div>
                            <h3>{hotspotData.info.title}</h3>
                            <p>{hotspotData.info.description}</p>
@@ -22,12 +23,12 @@ const ViewerPanel = ({ hotspotId, hotspotData, onReservation }) => {
                ) : (
                   <>
                      <My360Viewer id={hotspotId} />
-                     <div className="panel-data">
+                     <div className={styles.panelData}>
                         <div>
                            <h3>{hotspotData.info.title}</h3>
                            <p>{hotspotData.info.description}</p>
                         </div>
-                        <button className="reservation-btn" onClick={onReservation}>
+                        <button className={styles.reservationBtn} onClick={onReservation}>
                            Reservar Habitacion
                         </button>
                      </div>

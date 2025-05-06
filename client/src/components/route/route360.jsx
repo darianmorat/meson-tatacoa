@@ -1,8 +1,8 @@
 import React, { useMemo } from "react";
 import View360, { ControlBar, EquirectProjection } from "@egjs/react-view360";
-import "@egjs/react-view360/css/view360.min.css";
 import video360_1 from "../../assets/route-section/video360.mp4";
-import "./route360.css";
+import "@egjs/react-view360/css/view360.min.css";
+import styles from "./route360.module.css";
 
 const My360Route = () => {
    const plugins = useMemo(
@@ -25,11 +25,15 @@ const My360Route = () => {
    );
 
    return (
-      <div className="route-360-container">
-         <div className="route-360">
-            <View360 className="is-16by9" plugins={plugins} projection={projection} />
+      <div className={styles.route360}>
+         <div className={styles.container}>
+            <View360
+               className={styles.is16by9}
+               plugins={plugins}
+               projection={projection}
+            />
          </div>
-         <div className="viewer-360">
+         <div className={styles.description}>
             <div>
                <h3>Intrucciones de uso</h3>
                <p>

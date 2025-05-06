@@ -1,10 +1,11 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { HOTSPOTS, POOL_HOTSPOT } from "../../data/hotspots";
 import { useState } from "react";
+import { HOTSPOTS, POOL_HOTSPOT } from "../../../data/hotspots";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styles from "./NavBtns.module.css";
 
 const ALL_HOTSPOTS = [...HOTSPOTS, ...POOL_HOTSPOT];
 
-const NavigationBtns = ({ selectedHotspot, handleHotspotClick }) => {
+const NavigationBtns = ({ selectedHotspot, handleHotspotClick, sceneContainerClass }) => {
    const currentIndex = ALL_HOTSPOTS.findIndex((h) => h.id === selectedHotspot);
 
    const handlePool = () => {
@@ -24,7 +25,7 @@ const NavigationBtns = ({ selectedHotspot, handleHotspotClick }) => {
    const [isFullscreen, setIsFullscreen] = useState(false);
 
    const toggleFullscreen = () => {
-      const container = document.querySelector(".scene-container");
+      const container = document.querySelector(`.${sceneContainerClass}`);
       if (!isFullscreen) {
          container?.requestFullscreen?.().then(() => setIsFullscreen(true));
       } else {
@@ -34,9 +35,8 @@ const NavigationBtns = ({ selectedHotspot, handleHotspotClick }) => {
 
    return (
       <>
-         <div className="actions-btns">
+         <div className={styles.actionBtns}>
             <button
-               className="home-btn"
                onClick={() => handleHotspotClick(selectedHotspot)}
                aria-label="Inicio"
                title="Inicio"
@@ -44,7 +44,6 @@ const NavigationBtns = ({ selectedHotspot, handleHotspotClick }) => {
                <FontAwesomeIcon icon="fa-solid fa-home" />
             </button>
             <button
-               className="fullscreen-btn"
                onClick={toggleFullscreen}
                aria-label={
                   isFullscreen ? "Salir de pantalla completa" : "Pantalla completa"
@@ -57,29 +56,14 @@ const NavigationBtns = ({ selectedHotspot, handleHotspotClick }) => {
             </button>
          </div>
 
-         <div className="navigation-btns">
-            <button
-               className="pool-btn"
-               onClick={handlePool}
-               aria-label="Piscina"
-               title="Piscina "
-            >
+         <div className={styles.navBtns}>
+            <button onClick={handlePool} aria-label="Piscina" title="Piscina ">
                <FontAwesomeIcon icon="fa-solid fa-water" />
             </button>
-            <button
-               className="prev-btn"
-               onClick={handlePrev}
-               aria-label="Anterior"
-               title="Anterior"
-            >
+            <button onClick={handlePrev} aria-label="Anterior" title="Anterior">
                <FontAwesomeIcon icon="fa-solid fa-chevron-left" />
             </button>
-            <button
-               className="next-btn"
-               onClick={handleNext}
-               aria-label="Siguiente"
-               title="Siguiente"
-            >
+            <button onClick={handleNext} aria-label="Siguiente" title="Siguiente">
                <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
             </button>
          </div>

@@ -1,0 +1,135 @@
+.footer {
+   background-color: var(--bg-color-secondary);
+   padding: 60px 0 30px;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+.content {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(300px, 1fr));
+   gap: 30px;
+   margin-bottom: 40px;
+   align-items: center;
+}
+
+.sectionLogo {
+   display: flex;
+   flex-direction: column;
+   padding: 30px;
+   border-radius: 8px;
+
+   & .logo {
+      height: 150px;
+      margin-bottom: 20px;
+   }
+   & .description {
+      margin-bottom: 20px;
+      min-width: 150px;
+   }
+}
+
+.sectionData,
+.sectionBottom {
+   & a {
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}
+
+.sectionData {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 30px;
+   gap: 30px;
+
+   & div {
+      flex: 1;
+      min-width: 150px;
+
+      & .heading {
+         font-size: 1.2rem;
+         font-weight: 700;
+         margin-bottom: 20px;
+      }
+
+      & .navLinks,
+      & .contact {
+         padding: 0;
+         margin: 0;
+
+         & li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            & .icon {
+               margin-right: 10px;
+            }
+         }
+      }
+   }
+}
+
+.sectionBottom {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-top: 30px;
+   border-top: 1px solid var(--border-color);
+   font-size: 0.9rem;
+
+   .legalLinks {
+      display: flex;
+      gap: 20px;
+   }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+   .content {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+   }
+
+   .sectionData {
+      width: 100%;
+      padding-bottom: 0;
+   }
+
+   .sectionBottom {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+   }
+
+   .sectionLogo {
+      justify-content: center;
+      text-align: justify;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0;
+   }
+}
+
+@media (max-width: 480px) {
+   .sectionLogo {
+      padding: 0;
+      margin-bottom: 30px;
+   }
+   .sectionData {
+      padding: 0;
+      flex-direction: column;
+   }
+
+   .footer {
+      padding: 40px 0 20px;
+   }
+}

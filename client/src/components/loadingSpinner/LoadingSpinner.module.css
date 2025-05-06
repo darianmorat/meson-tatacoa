@@ -3,12 +3,12 @@
    display: grid;
    place-items: center;
    height: 100vh;
-   background-color: #f9fafb;
+   background-color: var(--bg-color-loading);
 }
 
 /* Shared spinner styles */
 .loader,
-.loader-2 {
+.loader2 {
    --color: #357;
    --speed: 0.9s;
 
@@ -30,7 +30,7 @@
 }
 
 /* Inner spinner (smaller, rotates clockwise) */
-.loader-2 {
+.loader2 {
    --size: 3em;
 
    width: var(--size);
@@ -42,8 +42,8 @@
 /* Dot styles for both spinners */
 .loader::before,
 .loader::after,
-.loader-2::before,
-.loader-2::after {
+.loader2::before,
+.loader2::after {
    content: "";
    position: absolute;
    background: var(--color);
@@ -53,12 +53,12 @@
 }
 
 .loader::before,
-.loader-2::before {
+.loader2::before {
    top: 0;
    right: 0;
 }
 .loader::after,
-.loader-2::after {
+.loader2::after {
    bottom: 0;
    left: 0;
 }

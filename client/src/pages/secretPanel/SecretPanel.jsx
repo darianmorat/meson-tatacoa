@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
-import { usePrivateStore } from "../stores/usePrivateStore";
+import { usePrivateStore } from "../../stores/usePrivateStore";
 import { useNavigate } from "react-router-dom";
+import styles from "./SecretPanel.module.css";
 
 const SecretPanelPage = () => {
    const { authenticate } = usePrivateStore();
@@ -19,14 +20,14 @@ const SecretPanelPage = () => {
    };
 
    return (
-      <div className="secret-panel-container">
-         <form onSubmit={handleSubmit(onSubmit)} className="secret-panel-form">
+      <div className={styles.secretPanel}>
+         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
             <h1>Acceso de Administrador</h1>
             <p>Ingresa la frase secreta</p>
 
-            <div className="input-wrapper">
+            <div className={styles.inputWrapper}>
                <input
-                  className="secret-password"
+                  className={styles.password}
                   type="password"
                   name="password"
                   id="password"
@@ -39,7 +40,7 @@ const SecretPanelPage = () => {
                />
             </div>
 
-            <button type="submit" className="unlock-button" disabled={!isValid}>
+            <button type="submit" className={styles.submitBtn} disabled={!isValid}>
                Desbloquear
             </button>
          </form>
