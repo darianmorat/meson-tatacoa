@@ -1,4 +1,7 @@
-- **Postman Collection**: [View here](https://your-public-postman-link) (includes all routes + examples).
+## API Reference
+
+- Postman Collection [View here](https://your-public-postman-link)
+- Visualization API flow [View here](https://github.com/darianmorat/meson-tatacoa/tree/main/docs/diagrams/APIs-request-flow.png)
 
 ### Auth Routes
 
