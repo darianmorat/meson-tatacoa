@@ -8,7 +8,7 @@
 
 ### System Diagrams
 
-System Diagrams: [View here](/docs/Diagrams/)
+[View here](/docs/Diagrams/)
 
 - **High-Level Architecture** (component communication)
 - **Database Schema** (tables & relationships)
@@ -17,7 +17,7 @@ System Diagrams: [View here](/docs/Diagrams/)
 ## API Reference
 
 - Postman collection: [View here](https://)
-- Interactive Docs (locally): [View here](https://) <!-- Swagger UI (use this later) -->
+- Interactive Docs (Swagger UI): [View here](https://)
 
 ## Getting Started
 
