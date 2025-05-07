@@ -6,6 +6,10 @@ This folder contains technical documentation for the project. Refer to the follo
 
 [`/docs/API.md`](./API.md) – List of all available API endpoints.
 
+### Getting Started
+
+[`/docs/INSTALLATION.md`](./INSTALLATION.md) – Setup instructions for running the project.
+
 ### System Diagrams
 
 [`/docs/Diagrams/`](./Diagrams/) – Visual overview of the app:
