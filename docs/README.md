@@ -23,42 +23,21 @@ System Diagrams: [View here](/docs/Diagrams/)
 
 Follow these steps to run the project locally
 
-1. Clone the repository:
-
 ```shell
+# Clone repository:
 git clone https://github.com/darianmorat/meson-tatacoa.git
 cd meson-tatacoa
-```
 
-2. Install dependencies:
-
-```shell
-npm install
-cd client && npm install
-```
-
-3. Set Up the PostgreSQL Database:
-
-```shell
-# Example (use your own DB name if you want)
+# Database setup:
 createdb meson_db
 psql -U your_username -d your_database_name -a -f server/db/init.sql
-```
 
-4. Configure environment variables:
+# Install dependencies:
+npm install && cd client && npm install
 
-```shell
-# Backend
-cp .env.example .env
+# Configure env variables:
+cp .env.example .env # Both in root and client
 
-# Frontend
-cd client
-cp .env.example .env
-```
-
-Run the project:
-
-```
-npm run dev
-cd client && npm run dev
+# Run server:
+npm run dev && cd client && npm run dev
 ```
