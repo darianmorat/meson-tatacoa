@@ -18,14 +18,6 @@ Official website for **El Meson De La Tatacoa**
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js (v18 or higher)
-- PostgreSQL (v15 or higher)
-- Git
-
-### Installation
-
 Clone the repo and install dependencies:
 
 ```shell
@@ -50,10 +42,7 @@ cd client && npm run dev
 
 ## Documentation
 
-Explore detailed guides in the /docs folder:
-
-- **API Reference** (`/docs/API.md`):
-- **System Diagrams** (`/docs/Diagrams/`):
+For complete documentation, refer to the [/docs section](https://github.com/darianmorat/meson-tatacoa/tree/main/docs).
 
 ## License
 
