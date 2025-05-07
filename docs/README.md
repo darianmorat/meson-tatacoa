@@ -8,18 +8,15 @@
 
 ### System Diagrams
 
-[View here](/docs/Diagrams/)
+- High-Level Architecture: [View here](/docs/diagrams/system-architecture.png)
+- Database Schema: [View here](/docs/diagrams/data-schema.png)
 
-- **High-Level Architecture** (component communication)
-- **Database Schema** (tables & relationships)
-- **API Flow** (frontend-backend interactions)
-
-## API Reference
+### API Reference
 
 - Postman collection: [View here](https://)
-- Interactive Docs (Swagger UI): [View here](https://)
+ <!-- - Interactive Docs (Swagger UI): [View here](https://) -->
 
-## Getting Started
+### Getting Started
 
 Follow these steps to run the project locally
 
