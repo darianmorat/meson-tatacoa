@@ -9,11 +9,11 @@
 ### System Diagrams
 
 - High-Level Architecture: [View here](/docs/diagrams/system-architecture.png)
-- Database Schema: [View here](/docs/diagrams/data-schema.png)
+- Database Schema: [View here](#)
 
 ### API Reference
 
-- Postman collection: [View here](https://)
+- Postman collection: [View here](#)
  <!-- - Interactive Docs (Swagger UI): [View here](https://) -->
 
 ### Getting Started
