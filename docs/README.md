@@ -6,15 +6,14 @@
 - **Backend**: Express.js
 - **Database**: PostgreSQL
 
-### System Diagrams
+### System Overview
 
-- High-Level Architecture: [View here](/docs/diagrams/system-architecture.png)
-- Database Schema: [View here](#)
+- High-Level Architecture: [View Diagram](/docs/diagrams/system-architecture.png)
 
 ### API Reference
 
-- Postman collection: [View here](#)
- <!-- - Interactive Docs (Swagger UI): [View here](https://) -->
+- Postman collection: [View Collection](#)
+ <!-- - Interactive Docs (Swagger UI): [View here](#) -->
 
 ### Getting Started
 
