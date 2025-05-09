@@ -1,21 +1,21 @@
-## Documentation
+# Documentation
 
-### Tech Stack
+## Tech Stack
 
 - **Frontend**: React.js
 - **Backend**: Express.js
 - **Database**: PostgreSQL
 
-### System Overview
+## System Overview
 
 - High-Level Architecture: [View Diagram](/docs/diagrams/system-architecture.png)
 
-### API Reference
+## API Reference
 
 - Postman collection: [View Collection](#)
  <!-- - Interactive Docs (Swagger UI): [View here](#) -->
 
-### Getting Started
+## Getting Started
 
 Follow these steps to run the project locally
 
