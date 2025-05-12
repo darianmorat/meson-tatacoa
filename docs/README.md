@@ -12,7 +12,7 @@
 
 ## API Reference
 
-- Postman collection: [View Collection](#)
+- Postman collection: [View Collection](https://www.postman.com/meson-tatacoa/meson-tatacoa/overview)
  <!-- - Interactive Docs (Swagger UI): [View here](#) -->
 
 ## Getting Started
