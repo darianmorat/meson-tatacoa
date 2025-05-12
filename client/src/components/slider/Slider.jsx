@@ -1,38 +1,37 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import image1 from "../../assets/slide-section/1.jpg";
-import image2 from "../../assets/slide-section/2.jpg";
-import image3 from "../../assets/slide-section/3.jpg";
-import image4 from "../../assets/slide-section/1.jpg";
-import image5 from "../../assets/slide-section/1.jpg";
-import image6 from "../../assets/slide-section/1.jpg";
+import { usePublicStore } from "../../stores/usePublicStore";
 import styles from "./Slider.module.css";
 
 const BackgroundSlider = () => {
+   const { fetchSlider, sliderImgs } = usePublicStore();
    const [currentIndex, setCurrentIndex] = useState(0);
-   const images = [image1, image2, image3, image4, image5, image6];
 
    useEffect(() => {
       const interval = setInterval(() => {
-         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+         setCurrentIndex((prevIndex) => (prevIndex + 1) % sliderImgs.length);
       }, 4000);
       return () => clearInterval(interval);
-   }, [images.length]);
+   }, [sliderImgs.length]);
+
+   useEffect(() => {
+      fetchSlider();
+   }, [fetchSlider]);
 
    const goToSlide = (index) => setCurrentIndex(index);
    const goToPrevious = () =>
-      setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-   const goToNext = () => setCurrentIndex((prev) => (prev + 1) % images.length);
+      setCurrentIndex((prev) => (prev - 1 + sliderImgs.length) % sliderImgs.length);
+   const goToNext = () => setCurrentIndex((prev) => (prev + 1) % sliderImgs.length);
 
    return (
       <div className={styles.container}>
          <div className={styles.slider}>
-            {images.map((image, index) => {
+            {sliderImgs.map((image, index) => {
                let position = index - currentIndex;
                let cardClass = styles.card;
 
-               if (position < -2) position += images.length;
-               if (position > 2) position -= images.length;
+               if (position < -2) position += sliderImgs.length;
+               if (position > 2) position -= sliderImgs.length;
                if (Math.abs(position) > 2) return null;
 
                if (position === -2) cardClass += ` ${styles.farLeft}`;
@@ -46,7 +45,7 @@ const BackgroundSlider = () => {
                return (
                   <div key={index} className={cardClass} onClick={() => goToSlide(index)}>
                      <img
-                        src={image}
+                        src={image.image_url}
                         alt={`Slide ${index + 1}`}
                         className={styles.image}
                      />
@@ -61,7 +60,7 @@ const BackgroundSlider = () => {
             </button>
 
             <div className={styles.dots}>
-               {images.map((_, index) => (
+               {sliderImgs.map((_, index) => (
                   <button
                      key={index}
                      className={`${styles.dot} ${index === currentIndex ? styles.activeDot : ""}`}
