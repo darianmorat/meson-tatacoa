@@ -6,6 +6,7 @@ export const authenticate = async (req, res) => {
       const { password } = req.body;
 
       if (password != process.env.ADMIN_PASSWORD) {
+         // use bcript how?
          return res.status(401).json({
             success: false,
             message: "Contraseña incorrecta",
@@ -31,12 +32,12 @@ export const verifyUser = async (req, res) => {
       }
 
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      res.status(200).json({ success: true });
+      if (decoded) {
+         res.status(200).json({ success: true });
+      }
    } catch (e) {
       if (e.name === "TokenExpiredError") {
-         return res
-            .status(401)
-            .json({ success: false, message: "Tu sesion a expirado", e });
+         return res.status(401).json({ success: false, message: "Tu sesion a expirado" });
       }
       res.status(403).json({ success: false, message: "Invalid token" });
    }

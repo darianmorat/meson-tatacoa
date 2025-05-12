@@ -1,9 +1,23 @@
+-- ==============
 -- SETUP DATABASE
+-- ==============
 CREATE DATABASE tatacoa;
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
+-- =============
 -- CREATE TABLES
+-- =============
+
+-- Slider section
+CREATE TABLE slider_imgs (
+   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+   image_url VARCHAR(255),
+   created_at TIMESTAMP DEFAULT NOW(),
+   updated_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Restaurant section
 CREATE TABLE categories (
    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
    name VARCHAR(100) NOT NULL
@@ -20,7 +34,20 @@ CREATE TABLE menu_items (
    updated_at TIMESTAMP DEFAULT NOW()
 );
 
+-- =============
 -- INSERT DATA
+-- =============
+
+-- Slider section
+INSERT INTO slider_imgs (image_url) VALUES 
+('https://miro.medium.com/v2/resize:fit:1400/0*xvdYqYBu6w-BXz0j'),
+('https://miro.medium.com/v2/resize:fit:1400/0*xvdYqYBu6w-BXz0j'),
+('https://miro.medium.com/v2/resize:fit:1400/0*xvdYqYBu6w-BXz0j'),
+('https://miro.medium.com/v2/resize:fit:1400/0*xvdYqYBu6w-BXz0j'),
+('https://miro.medium.com/v2/resize:fit:1400/0*xvdYqYBu6w-BXz0j'), 
+('https://miro.medium.com/v2/resize:fit:1400/0*xvdYqYBu6w-BXz0j');
+
+-- Restaurant section
 INSERT INTO categories (name) VALUES 
 ('Principales'),
 ('Postres');

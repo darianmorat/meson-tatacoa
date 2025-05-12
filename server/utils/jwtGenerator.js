@@ -4,5 +4,5 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export function jwtGenerator() {
-   return jwt.sign({}, process.env.JWT_SECRET, { expiresIn: "10s" });
+   return jwt.sign({}, process.env.JWT_SECRET, { expiresIn: "1h" });
 }
