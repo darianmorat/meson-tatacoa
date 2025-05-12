@@ -13,11 +13,11 @@ import ReservationPage from "./pages/reservation/Reservation";
 import SecretPanelPage from "./pages/secretPanel/SecretPanel";
 import DashboardPage from "./pages/dashboard/Dashboard";
 
-import { usePrivateStore } from "./stores/usePrivateStore";
+import { useAuthStore } from "./stores/useAuthStore";
 import { LoadingSpinner } from "./components/loadingSpinner/LoadingSpinner";
 
 function App() {
-   const { isAuth, checkingAuth, checkAuth } = usePrivateStore();
+   const { isAuth, checkingAuth, checkAuth } = useAuthStore();
    const [showLoader, setShowLoader] = useState(true);
 
    useEffect(() => {

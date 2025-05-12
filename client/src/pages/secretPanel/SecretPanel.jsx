@@ -1,10 +1,10 @@
 import { useForm } from "react-hook-form";
-import { usePrivateStore } from "../../stores/usePrivateStore";
+import { useAuthStore } from "../../stores/useAuthStore";
 import { useNavigate } from "react-router-dom";
 import styles from "./SecretPanel.module.css";
 
 const SecretPanelPage = () => {
-   const { authenticate } = usePrivateStore();
+   const { authenticate } = useAuthStore();
    const {
       handleSubmit,
       register,

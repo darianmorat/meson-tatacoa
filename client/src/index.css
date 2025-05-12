@@ -16,6 +16,10 @@
    --color-logout: #e74c3c;
    --bg-color-sidebar: #2c3e50;
 
+   --color-edit: #3152a8;
+   --color-create: #49a133;
+   --color-delete: #c83d3d;
+
    /* Effects */
    --shadow-lg: 0 5px 20px rgba(0, 0, 0, 0.5);
    --shadow-sm: 0 5px 20px rgba(0, 0, 0, 0.2);
@@ -104,6 +108,7 @@ button {
    cursor: pointer;
    transition: var(--transition-fast);
    border-radius: var(--border-radius-sm);
+   background-color: var(--color-inactive);
 
    &:hover {
       filter: brightness(1.1);

@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { toast } from "react-toastify";
 import api from "../api/axios";
 
-export const usePrivateStore = create((set) => ({
+export const useAuthStore = create((set) => ({
    isAuth: false,
    checkingAuth: true,
 
@@ -54,7 +54,7 @@ export const usePrivateStore = create((set) => ({
       } catch (e) {
          localStorage.removeItem("token");
          set({ isAuth: false, checkingAuth: false });
-         toast.error(e.response.data.message);
+         toast.error(e.response.data.message); // bug: doesn't show toast
       }
    },
 }));

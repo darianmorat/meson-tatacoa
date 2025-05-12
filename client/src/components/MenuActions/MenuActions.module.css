@@ -1,0 +1,19 @@
+.form {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   margin-top: 25px;
+}
+
+.formGroup {
+   color: var(--font-color-base);
+
+   & input,
+   textarea {
+      width: 100%;
+   }
+}
+
+.submitBtn {
+   background-color: var(--color-create);
+}
