@@ -1,0 +1,40 @@
+:root {
+   /* Colors */
+   --color-primary: #49a133;
+   --color-secondary: #0066cc;
+   --color-inactive: #ccc;
+
+   --bg-color-primary: white;
+   --bg-color-secondary: #f9fafb;
+   --bg-color-loading: #f9fafb;
+
+   /* Dashboard */
+   --color-logout: #e74c3c;
+   --bg-color-sidebar: #2c3e50;
+
+   --color-edit: #3152a8;
+   --color-create: #49a133;
+   --color-delete: #c83d3d;
+
+   /* Effects */
+   --shadow-lg: 0 5px 20px rgba(0, 0, 0, 0.5);
+   --shadow-sm: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+   --transition-fast: all 0.1s ease;
+   --transition-normal: all 0.2s ease;
+   --transition-slow: all 0.3s ease;
+   --transition-slider: all 0.6s ease;
+
+   /* UI elements */
+   --border-radius-sm: 5px;
+   --border-radius-md: 10px;
+
+   /* Typografy */
+   --font-size-base: 1rem;
+   --font-size-sm: 0.5rem; /* not using for now */
+   --font-size-md: 1.2rem;
+   --font-size-lg: 2rem;
+
+   --font-color-base: #303030;
+   --font-color-title: #215d9e;
+}
