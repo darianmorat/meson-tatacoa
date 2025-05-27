@@ -17,9 +17,8 @@ export const HOTSPOTS = [
       category: "reservation",
       position: [-0.9, -0.42, 0.1],
       info: {
-         title: "LOCALIDAD #1",
-         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nulla at suscipit cursus, felis turpis dictum odio, ut tincidunt magna risus in ante. Integer sed justo sed velit egestas semper. Curabitur finibus convallis.",
+         title: "#1 MIOCOCHILIUS",
+         description: "1 cama doble,pareja, baño privado",
       },
    },
    {
@@ -27,9 +26,8 @@ export const HOTSPOTS = [
       category: "reservation",
       position: [-0.8, -0.4, 0.7],
       info: {
-         title: "LOCALIDAD #2",
-         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nulla at suscipit cursus, felis turpis dictum odio, ut tincidunt magna risus in ante. Integer sed justo sed velit egestas semper. Curabitur finibus convallis.",
+         title: "#2 HUILATHERIUM",
+         description: "1 cama doble, pareja, baño privado",
       },
    },
    {
@@ -37,9 +35,9 @@ export const HOTSPOTS = [
       category: "reservation",
       position: [-0.15, -0.38, 1.15],
       info: {
-         title: "LOCALIDAD #3",
+         title: "#3 STIRTONIA",
          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nulla at suscipit cursus, felis turpis dictum odio, ut tincidunt magna risus in ante. Integer sed justo sed velit egestas semper. Curabitur finibus convallis.",
+            "2 camas dobles familia, 4 personas acomodación multiple familiar baño privado",
       },
    },
    {
@@ -47,9 +45,9 @@ export const HOTSPOTS = [
       category: "reservation",
       position: [-2.0, -0.48, -0.15],
       info: {
-         title: "LOCALIDAD #4",
+         title: "#4 PHORUSRHACIDAE",
          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nulla at suscipit cursus, felis turpis dictum odio, ut tincidunt magna risus in ante. Integer sed justo sed velit egestas semper. Curabitur finibus convallis.",
+            "3 camas dobles acomodacion multiple, familiar 6 personas,  no tiene baño",
       },
    },
    {
@@ -57,9 +55,19 @@ export const HOTSPOTS = [
       category: "reservation",
       position: [1.1, -0.28, 0.7],
       info: {
-         title: "LOCALIDAD #5",
+         title: "#5 STUPENDEMYS",
          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nulla at suscipit cursus, felis turpis dictum odio, ut tincidunt magna risus in ante. Integer sed justo sed velit egestas semper. Curabitur finibus convallis.",
+            "2 camas dobles 4 personas acomodación multiple familiar baño privado",
+      },
+   },
+   {
+      id: 6,
+      category: "reservation",
+      position: [0.4, -0.38, 1.38],
+      info: {
+         title: "#6 PURUSSAURUS",
+         description:
+            "2 camas dobles  4 personas acomodación multiple familiar baño privado",
       },
    },
 ];
