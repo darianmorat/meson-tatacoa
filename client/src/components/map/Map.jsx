@@ -54,6 +54,20 @@ const MapRender = () => {
             // Return to original view
             animateCamera(CAMERA_INITIAL_POSITION);
 
+            // Reset controls target to original position
+            if (controlsRef.current) {
+               gsap.to(controlsRef.current.target, {
+                  x: 0,
+                  y: 0,
+                  z: 0,
+                  duration: ANIMATION_DURATION,
+                  ease: "power2.inOut",
+                  onUpdate: () => {
+                     controlsRef.current.update();
+                  },
+               });
+            }
+
             // Handle closing
             setTimeout(() => {
                setSelectedHotspot(null);
