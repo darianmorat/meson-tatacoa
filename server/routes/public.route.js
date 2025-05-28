@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { getSliderImgs, getMenu } from "../controllers/public.controller.js";
+import { getSliders, getMenu } from "../controllers/public.controller.js";
 
 const router = Router();
 
-router.get("/get-slider-imgs", getSliderImgs);
-router.get("/get-menu", getMenu);
+router.get("/sliders", getSliders);
+router.get("/menu", getMenu);
 
 export default router;
