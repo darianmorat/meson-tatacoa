@@ -1,4 +1,5 @@
 import { usePublicStore } from "../../stores/usePublicStore";
+import styles from "./MenuActions.module.css";
 
 export const DeleteConfirm = ({ setMenuContent, category, item }) => {
    const { deleteMenu } = usePublicStore();
@@ -7,18 +8,21 @@ export const DeleteConfirm = ({ setMenuContent, category, item }) => {
       <div>
          <h1>Remover producto</h1>
          <p>
-            Desea eliminar el producto <strong>{item.name}</strong>?
+            Esta seguro de que desea eliminar <strong>{item.name}</strong>?
          </p>
-         <div>
+         <div className={styles.deleteActions}>
             <button
                onClick={() => {
                   deleteMenu(category, item.id);
                   setMenuContent(null);
                }}
+               className={styles.submitBtn}
             >
                Confirmar
             </button>
-            <button onClick={() => setMenuContent(null)}>Cancelar</button>
+            <button onClick={() => setMenuContent(null)} className={styles.cancel}>
+               Cancelar
+            </button>
          </div>
       </div>
    );

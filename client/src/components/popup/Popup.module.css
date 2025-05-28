@@ -1,6 +1,8 @@
 .popup {
    background-color: rgba(0, 0, 0, 0.7);
-   position: absolute;
+   position: fixed;
+   top: 0;
+   left: 0;
    height: 100vh;
    width: 100vw;
    display: flex;
@@ -17,6 +19,7 @@
    display: flex;
    flex-direction: column;
    position: relative;
+   gap: 20px;
 
    & .closePopup {
       position: absolute;
@@ -25,5 +28,14 @@
       margin: 20px;
       padding: 5px 15px 10px 15px;
       background-color: var(--color-delete);
+   }
+
+   & div {
+      /* display: flex; */
+      /* gap: 20px; */
+
+      & button {
+         flex: 1;
+      }
    }
 }
