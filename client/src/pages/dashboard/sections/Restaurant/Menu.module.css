@@ -1,0 +1,89 @@
+.categoryTabs {
+   display: flex;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+   margin-bottom: 25px;
+   gap: 10px 90px;
+
+   & button {
+      width: 100%;
+      max-width: 180px;
+   }
+
+   & div {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      max-width: 300px;
+   }
+
+   & .tabBtn {
+      background: var(--color-inactive);
+   }
+
+   & .active {
+      background: var(--color-secondary);
+   }
+}
+
+.menuItems {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   gap: 25px;
+
+   & .menuItem {
+      border-radius: var(--border-radius-md);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      transition: var(--transition-normal);
+
+      /* &:hover { */
+      /*    transform: translateY(-5px); */
+      /* } */
+
+      & .itemImage {
+         height: 200px;
+
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+
+      & .itemInfo {
+         padding: 15px;
+      }
+
+      & .itemPrice {
+         color: #e91e63;
+         font-weight: bold;
+      }
+
+      .itemDesc {
+         color: #666;
+         margin: 5px 0 0 0;
+      }
+   }
+}
+
+/* THIS SECTION IS BEING REPEATED FIX */
+.actionBtns {
+   margin: 10px;
+   display: flex;
+   /* gap: 10px; */
+
+   & button {
+      flex: 1;
+   }
+}
+
+.createBtn {
+   background-color: var(--color-create);
+}
+.editBtn {
+   background-color: var(--color-edit);
+}
+.deleteBtn {
+   background-color: var(--color-delete);
+}

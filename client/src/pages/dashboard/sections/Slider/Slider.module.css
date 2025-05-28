@@ -1,0 +1,59 @@
+.sliderImgsContainer {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+   gap: 20px;
+
+   & .sliderImg {
+      padding: 5px;
+      background-color: var(--bg-color-sidebar);
+      border-radius: var(--border-radius-md);
+      box-shadow: var(--shadow-sm);
+
+      & img {
+         width: 100%;
+         height: 250px;
+         object-fit: cover;
+         border-radius: var(--border-radius-sm);
+      }
+   }
+}
+
+.createContainer {
+   display: flex;
+   gap: 20px;
+
+   & input {
+      flex: 1;
+   }
+}
+
+/* THIS SECTION IS BEING REPEATED FIX */
+.actionBtns {
+   display: flex;
+
+   & button {
+      flex: 1;
+   }
+}
+.sliderAddImage {
+   background-color: var(--color-create);
+}
+.deleteBtn {
+   background-color: var(--color-delete);
+}
+
+.popupActions {
+   display: flex;
+   gap: 10px;
+
+   & button {
+      flex: 1;
+   }
+
+   .confirm {
+      background-color: var(--color-create);
+   }
+   .cancel {
+      background-color: var(--color-delete);
+   }
+}
