@@ -11,7 +11,7 @@ export const usePublicStore = create((set, get) => ({
       try {
          set({ loading: true });
 
-         const res = await api.get("/public/get-slider-imgs");
+         const res = await api.get("/public/sliders");
 
          if (res.data.success) {
             set({ sliderImgs: res.data.data, loading: false });
@@ -21,6 +21,7 @@ export const usePublicStore = create((set, get) => ({
          toast.error(e.response.data.message);
       }
    },
+
    createSlider: async (imageUrl) => {
       try {
          const config = {
@@ -34,6 +35,7 @@ export const usePublicStore = create((set, get) => ({
          };
 
          const res = await api.post("/private/slider/create", body, config);
+
          if (res.data.success) {
             toast.success(res.data.message);
             await get().fetchSlider();
@@ -52,11 +54,9 @@ export const usePublicStore = create((set, get) => ({
          };
 
          const res = await api.delete(`/private/slider/delete/${id}`, config);
+
          if (res.data.success) {
             toast.success(res.data.message);
-            // set((prevState) => ({
-            //    sliderImgs: prevState.sliderImgs.filter((img) => img.id !== id),
-            // }));
             await get().fetchSlider();
          }
       } catch (e) {
@@ -68,7 +68,7 @@ export const usePublicStore = create((set, get) => ({
       try {
          set({ loading: true });
 
-         const res = await api.get("/public/get-menu", {
+         const res = await api.get("/public/menu", {
             params: { categoryName },
          });
 
