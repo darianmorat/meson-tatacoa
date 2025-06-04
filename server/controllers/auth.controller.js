@@ -1,12 +1,15 @@
 import { jwtGenerator } from "../utils/jwtGenerator.js";
+import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 export const authenticate = async (req, res) => {
    try {
       const { password } = req.body;
+      const adminPassword = process.env.ADMIN_PASSWORD;
 
-      if (password != process.env.ADMIN_PASSWORD) {
-         // use bcript how?
+      const isValid = bcrypt.compareSync(password, adminPassword);
+
+      if (!isValid) {
          return res.status(401).json({
             success: false,
             message: "Contraseña incorrecta",
