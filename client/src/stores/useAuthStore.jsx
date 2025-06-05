@@ -5,6 +5,7 @@ import api from "../api/axios";
 export const useAuthStore = create((set) => ({
    isAuth: false,
    checkingAuth: true,
+   loginAttempts: {},
 
    authenticate: async (password) => {
       try {
@@ -16,11 +17,19 @@ export const useAuthStore = create((set) => ({
 
          if (res.data.success) {
             localStorage.setItem("token", res.data.token);
-            set({ isAuth: true });
+            set({ isAuth: true, loginAttempts: {} });
             toast.success(res.data.message);
          }
       } catch (e) {
          toast.error(e.response.data.message);
+
+         const headers = e.response.headers;
+         set({
+            loginAttempts: {
+               total: headers["ratelimit-limit"], // String (should be saved as a number)
+               remaining: headers["ratelimit-remaining"], // String (should be saved as a number)
+            },
+         });
       }
    },
 
