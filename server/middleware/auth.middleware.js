@@ -13,14 +13,9 @@ export default async (req, res, next) => {
       }
 
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
-
-      if (decoded === false) {
-         return res
-            .status(403)
-            .json({ success: false, message: "Permiso denegado. Solo administradores" });
+      if (decoded) {
+         next();
       }
-
-      next();
    } catch (e) {
       res.status(403).json({ success: false, message: "Permiso denegado" });
    }
