@@ -17,20 +17,13 @@ import { useAuthStore } from "./stores/useAuthStore";
 import { LoadingSpinner } from "./components/loadingSpinner/LoadingSpinner";
 
 function App() {
-   const { isAuth, checkingAuth, checkAuth } = useAuthStore();
-   const [showLoader, setShowLoader] = useState(true);
+   const { isAuth, isLoading, checkAuth } = useAuthStore();
 
    useEffect(() => {
-      const authTimer = setTimeout(() => {
-         checkAuth().finally(() => {
-            setTimeout(() => setShowLoader(false), 700);
-         });
-      }, 100);
-
-      return () => clearTimeout(authTimer);
+      checkAuth();
    }, [checkAuth]);
 
-   if (checkingAuth || showLoader) {
+   if (isLoading) {
       return <LoadingSpinner />;
    }
 

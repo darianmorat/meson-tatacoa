@@ -4,7 +4,7 @@ import api from "../api/axios";
 
 export const useAuthStore = create((set) => ({
    isAuth: false,
-   checkingAuth: true,
+   isLoading: true,
    loginAttempts: {},
 
    authenticate: async (password) => {
@@ -35,7 +35,7 @@ export const useAuthStore = create((set) => ({
 
    logout: () => {
       localStorage.removeItem("token");
-      set({ isAuth: false, checkingAuth: false });
+      set({ isAuth: false });
       toast.success("Sesion cerrada");
    },
 
@@ -43,11 +43,10 @@ export const useAuthStore = create((set) => ({
       const token = localStorage.getItem("token");
 
       if (!token) {
-         set({ checkingAuth: false });
+         set({ isAuth: false, isLoading: false });
          return;
       }
 
-      set({ checkingAuth: true });
       try {
          const config = {
             headers: {
@@ -58,12 +57,12 @@ export const useAuthStore = create((set) => ({
          const res = await api.get("/auth/verify", config);
 
          if (res.data.success) {
-            set({ isAuth: true, checkingAuth: false });
+            set({ isAuth: true, isLoading: false });
          }
       } catch (e) {
          localStorage.removeItem("token");
-         set({ isAuth: false, checkingAuth: false });
-         toast.error(e.response.data.message); // bug: doesn't show toast
+         set({ isAuth: false, isLoading: false });
+         toast.error(e.response.data.message);
       }
    },
 }));
