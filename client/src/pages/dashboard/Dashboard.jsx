@@ -5,7 +5,8 @@ import { SideBar } from "./sections/Sidebar/Sidebar";
 import styles from "./Dashboard.module.css";
 
 const DashboardPage = () => {
-   const [activeSection, setActiveSection] = useState("dashboard");
+   const currentActiveSection = sessionStorage.getItem("activeSection");
+   const [activeSection, setActiveSection] = useState(currentActiveSection);
 
    const sections = [
       { id: "dashboard", name: "DASHBOARD" },

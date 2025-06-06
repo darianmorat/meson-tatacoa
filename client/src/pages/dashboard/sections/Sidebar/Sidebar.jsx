@@ -12,6 +12,8 @@ export const SideBar = ({ sections, activeSection, setActiveSection }) => {
 
    const handleSectionChange = (sectionId) => {
       setActiveSection(sectionId);
+      sessionStorage.setItem("activeSection", sectionId);
+
       if (window.innerWidth < 768) {
          setIsMenuOpen(false);
       }
@@ -37,7 +39,12 @@ export const SideBar = ({ sections, activeSection, setActiveSection }) => {
                   {section.name}
                </button>
             ))}
-            <button className={styles.logoutBtn} onClick={() => logout()}>
+            <button
+               className={styles.logoutBtn}
+               onClick={() => {
+                  sessionStorage.setItem("activeSection", "dashboard"), logout();
+               }}
+            >
                CERRAR SESION
             </button>
          </div>
