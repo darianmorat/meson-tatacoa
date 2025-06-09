@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Popup.module.css";
 
 export const Popup = ({ onClose, children }) => {
@@ -6,7 +7,7 @@ export const Popup = ({ onClose, children }) => {
          <div className={styles.popupContent}>
             {children}
             <button className={styles.closePopup} onClick={onClose}>
-               x
+               <FontAwesomeIcon icon="fa-solid fa-xmark" />
             </button>
          </div>
       </div>
