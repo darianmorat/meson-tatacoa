@@ -18,10 +18,13 @@
    }
 
    & .tabBtn {
-      background: var(--color-inactive);
+      color: var(--color-secondary);
+      border: 2px solid var(--color-secondary);
+      background-color: transparent;
    }
 
    & .active {
+      color: white;
       background: var(--color-secondary);
    }
 }
@@ -36,10 +39,13 @@
       box-shadow: var(--shadow-sm);
       overflow: hidden;
       transition: var(--transition-normal);
+      position: relative;
 
-      /* &:hover { */
-      /*    transform: translateY(-5px); */
-      /* } */
+      &:hover {
+         .deleteBtn {
+            opacity: 1;
+         }
+      }
 
       & .itemImage {
          height: 200px;
@@ -79,11 +85,20 @@
 }
 
 .createBtn {
-   background-color: var(--color-create);
+   background-color: var(--color-primary);
 }
 .editBtn {
-   background-color: var(--color-edit);
+   color: var(--color-secondary);
+   border: 2px solid var(--color-secondary);
+   background-color: transparent;
 }
 .deleteBtn {
-   background-color: var(--color-delete);
+   position: absolute;
+   top: 0px;
+   right: 0px;
+   margin: 5px;
+   padding: 10px 15px;
+   opacity: 0;
+   background-color: var(--color-logout);
+   box-shadow: var(--shadow-lg);
 }

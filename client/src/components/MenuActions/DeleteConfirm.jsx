@@ -11,6 +11,9 @@ export const DeleteConfirm = ({ setMenuContent, category, item }) => {
             Esta seguro de que desea eliminar <strong>{item.name}</strong>?
          </p>
          <div className={styles.deleteActions}>
+            <button onClick={() => setMenuContent(null)} className={styles.cancel}>
+               Cancelar
+            </button>
             <button
                onClick={() => {
                   deleteMenu(category, item.id);
@@ -19,9 +22,6 @@ export const DeleteConfirm = ({ setMenuContent, category, item }) => {
                className={styles.submitBtn}
             >
                Confirmar
-            </button>
-            <button onClick={() => setMenuContent(null)} className={styles.cancel}>
-               Cancelar
             </button>
          </div>
       </div>

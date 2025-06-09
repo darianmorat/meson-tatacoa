@@ -15,10 +15,12 @@
 }
 
 .submitBtn {
-   background-color: var(--color-create);
+   background-color: var(--color-secondary);
 }
 .cancel {
-   background-color: var(--color-delete);
+   color: var(--color-secondary);
+   border: 2px solid var(--color-secondary);
+   background-color: transparent;
 }
 
 .deleteActions {

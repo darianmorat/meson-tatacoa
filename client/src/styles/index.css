@@ -62,11 +62,11 @@ button {
    color: white;
    font-weight: 500;
    padding: 12px 20px;
-   border: 1px solid transparent;
    cursor: pointer;
+   border: none;
    transition: var(--transition-fast);
    border-radius: var(--border-radius-sm);
-   background-color: var(--color-inactive);
+   background-color: var(--color-secondary);
 
    &:hover {
       filter: brightness(1.1);

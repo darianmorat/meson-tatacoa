@@ -5,6 +5,7 @@ import { EditMenuForm } from "../../../../components/MenuActions/EditMenuForm";
 import { DeleteConfirm } from "../../../../components/MenuActions/DeleteConfirm";
 import { Popup } from "../../../../components/popup/Popup";
 import styles from "./Menu.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { RemoveScroll } from "react-remove-scroll";
 
 export const MenuSection = () => {
@@ -104,7 +105,7 @@ export const MenuSection = () => {
                                  setMenuContent("delete");
                               }}
                            >
-                              Remover
+                              <FontAwesomeIcon icon="fa-solid fa-xmark" />
                            </button>
                         </div>
                      </div>

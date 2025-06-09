@@ -1,8 +1,7 @@
 :root {
    /* Colors */
    --color-primary: #49a133;
-   --color-secondary: #0066cc;
-   --color-inactive: #ccc;
+   --color-secondary: #215d9e;
 
    --bg-color-primary: white;
    --bg-color-secondary: #f9fafb;
@@ -11,10 +10,6 @@
    /* Dashboard */
    --color-logout: #e74c3c;
    --bg-color-sidebar: #2c3e50;
-
-   --color-edit: #3152a8;
-   --color-create: #49a133;
-   --color-delete: #c83d3d;
 
    /* Effects */
    --shadow-lg: 0 5px 20px rgba(0, 0, 0, 0.5);

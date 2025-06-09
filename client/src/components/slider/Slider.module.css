@@ -83,8 +83,8 @@
    & .dot {
       width: 10px;
       height: 10px;
-      background-color: var(--color-inactive);
-      border: none;
+      background-color: transparent;
+      border: 2px solid var(--color-secondary);
       cursor: pointer;
       transition: var(--transition-slider);
 
