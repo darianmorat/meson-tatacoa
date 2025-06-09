@@ -41,13 +41,17 @@
 }
 
 .sectionBtn {
-   background: none;
+   background-color: var(--bg-color-sidebar);
    color: white;
    text-align: left;
 
    &.active {
       background-color: var(--color-secondary);
       font-weight: bold;
+   }
+
+   &.hover {
+      filter: brightness(2);
    }
 }
 
