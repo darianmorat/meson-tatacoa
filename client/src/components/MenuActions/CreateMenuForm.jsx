@@ -19,12 +19,11 @@ export const CreateMenuForm = ({ setMenuContent, category }) => {
 
    return (
       <div>
-         <h1>Create menu form</h1>
+         <h1>Crear Producto</h1>
 
          <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-            {/* Product Name */}
             <div className={styles.formGroup}>
-               <label htmlFor="name">Product name:</label>
+               <label htmlFor="name">Nombre:</label>
                <input
                   type="text"
                   id="name"
@@ -48,9 +47,8 @@ export const CreateMenuForm = ({ setMenuContent, category }) => {
                {errors.name && <p className="error-message">{errors.name.message}</p>}
             </div>
 
-            {/* Product Price */}
             <div className={styles.formGroup}>
-               <label htmlFor="price">Product price:</label>
+               <label htmlFor="price">Precio:</label>
                <input
                   type="number"
                   id="price"
@@ -69,21 +67,20 @@ export const CreateMenuForm = ({ setMenuContent, category }) => {
                {errors.price && <p className="error-message">{errors.price.message}</p>}
             </div>
 
-            {/* Product Description */}
             <div className={styles.formGroup}>
-               <label htmlFor="description">Product description:</label>
+               <label htmlFor="description">Descripcion:</label>
                <textarea
                   id="description"
                   rows={3}
                   {...register("description", {
                      required: "Descripción es obligatoria",
                      minLength: {
-                        value: 10,
-                        message: "Mínimo 10 caracteres",
+                        value: 35,
+                        message: "Mínimo 35 caracteres",
                      },
                      maxLength: {
-                        value: 200,
-                        message: "Máximo 200 caracteres",
+                        value: 100,
+                        message: "Máximo 100 caracteres",
                      },
                   })}
                   className={errors.description ? styles.errorInput : ""}
@@ -93,9 +90,8 @@ export const CreateMenuForm = ({ setMenuContent, category }) => {
                )}
             </div>
 
-            {/* Image URL */}
             <div className={styles.formGroup}>
-               <label htmlFor="imageUrl">Image URL:</label>
+               <label htmlFor="imageUrl">Imagen:</label>
                <input
                   type="url"
                   id="imageUrl"
