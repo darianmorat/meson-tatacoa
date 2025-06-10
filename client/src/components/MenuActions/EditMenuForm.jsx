@@ -53,11 +53,12 @@ export const EditMenuForm = ({ item, setMenuContent, category }) => {
                <input
                   type="number"
                   id="price"
+                  step="1"
                   defaultValue={item.price}
                   {...register("price", {
                      required: "Precio es obligatorio",
                      min: {
-                        value: 0.01,
+                        value: 1,
                         message: "El precio debe ser mayor que 0",
                      },
                      valueAsNumber: true,
