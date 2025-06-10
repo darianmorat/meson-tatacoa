@@ -18,7 +18,7 @@ export const authenticate = async (req, res) => {
 
       res.status(200).json({
          success: true,
-         message: "Autenticacion exitosa",
+         message: "Autenticación exitosa",
          token: jwtGenerator(),
       });
    } catch (error) {
@@ -40,8 +40,8 @@ export const verifyUser = async (req, res) => {
       }
    } catch (e) {
       if (e.name === "TokenExpiredError") {
-         return res.status(401).json({ success: false, message: "Tu sesion a expirado" });
+         return res.status(401).json({ success: false, message: "Tu sesión ha expirado" });
       }
-      res.status(403).json({ success: false, message: "Token invalido" });
+      res.status(403).json({ success: false, message: "Token inválido" });
    }
 };
