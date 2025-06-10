@@ -1,5 +1,9 @@
 import React, { useMemo } from "react";
-import View360, { ControlBar, EquirectProjection } from "@egjs/react-view360";
+import View360, {
+   ControlBar,
+   EquirectProjection,
+   LoadingSpinner,
+} from "@egjs/react-view360";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import image360_1 from "../../../assets/map-section/panoramic-img/shot-panoramic-composition-living-room.jpg";
 import image360_2 from "../../../assets/map-section/panoramic-img/OpenfootageNET_Hotel_low.jpg";
@@ -43,7 +47,7 @@ const My360Viewer = ({ id }) => {
       );
    }
 
-   const plugins = useMemo(() => [new ControlBar({})], []);
+   const plugins = useMemo(() => [new ControlBar({}), new LoadingSpinner({})], []);
    const projection = useMemo(
       () =>
          new EquirectProjection({

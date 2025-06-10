@@ -1,5 +1,9 @@
 import React, { useMemo } from "react";
-import View360, { ControlBar, EquirectProjection } from "@egjs/react-view360";
+import View360, {
+   ControlBar,
+   EquirectProjection,
+   LoadingSpinner,
+} from "@egjs/react-view360";
 import video360_1 from "../../assets/route-section/video360.mp4";
 import "@egjs/react-view360/css/view360.min.css";
 import styles from "./route360.module.css";
@@ -10,6 +14,7 @@ const My360Route = () => {
          new ControlBar({
             autoHide: true,
          }),
+         new LoadingSpinner({}),
       ],
       [],
    );
