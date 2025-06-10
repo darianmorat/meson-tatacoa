@@ -36,7 +36,7 @@ export const useAuthStore = create((set) => ({
    logout: () => {
       localStorage.removeItem("token");
       set({ isAuth: false });
-      toast.success("Sesion cerrada");
+      toast.success("Sesión cerrada");
    },
 
    checkAuth: async () => {
