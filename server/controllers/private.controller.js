@@ -8,7 +8,7 @@ export const createSlider = async (req, res) => {
 
       res.status(201).json({
          success: true,
-         message: "image created successfully",
+         message: "Imagen creada exitosamente",
       });
    } catch (e) {
       res.status(500).json({
@@ -26,7 +26,7 @@ export const deleteSlider = async (req, res) => {
 
       res.status(200).json({
          success: true,
-         message: "image deleted successfully",
+         message: "Imagen eliminada exitosamente",
       });
    } catch (e) {
       res.status(500).json({
@@ -45,7 +45,7 @@ export const editMenu = async (req, res) => {
 
       res.status(201).json({
          success: true,
-         message: "item updated succesfully",
+         message: "Item editado exitosamente",
       });
    } catch (error) {
       res.status(500).json({
@@ -61,13 +61,13 @@ export const createMenu = async (req, res) => {
       const { name, price, description, imageUrl } = req.body;
 
       const categories = await menuModel.category(categoryName);
-      const categoryId = categories.rows[0].id;
+      const categoryId = categories[0][0].id;
 
       await menuModel.create(categoryId, name, price, description, imageUrl);
 
       res.status(201).json({
          success: true,
-         message: "Item created successfully",
+         message: "Item creado exitosamente",
       });
    } catch (e) {
       res.status(500).json({
@@ -85,7 +85,7 @@ export const deleteMenu = async (req, res) => {
 
       res.status(200).json({
          success: true,
-         message: "item deleted successfully",
+         message: "Item eliminado exitosamente",
       });
    } catch (e) {
       res.status(500).json({

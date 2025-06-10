@@ -31,7 +31,7 @@ export const verifyUser = async (req, res) => {
       const token = req.header("token");
 
       if (!token) {
-         return res.status(401).json({ success: false, message: "Not authorized" });
+         return res.status(401).json({ success: false, message: "No autorizado" });
       }
 
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
@@ -42,6 +42,6 @@ export const verifyUser = async (req, res) => {
       if (e.name === "TokenExpiredError") {
          return res.status(401).json({ success: false, message: "Tu sesion a expirado" });
       }
-      res.status(403).json({ success: false, message: "Invalid token" });
+      res.status(403).json({ success: false, message: "Token invalido" });
    }
 };
