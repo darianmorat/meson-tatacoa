@@ -13,8 +13,7 @@ export const sliderModel = {
       return pool.query(
          ` 
          insert into slider_imgs 
-         (image_url) values ($1) 
-         returning *
+         (image_url) values (?) 
       `,
          [imageUrl],
       );
@@ -24,8 +23,7 @@ export const sliderModel = {
       return pool.query(
          `
          delete from slider_imgs where 
-         id = $1 
-         returning *
+         id = ?
       `,
          [id],
       );
@@ -39,7 +37,7 @@ export const menuModel = {
             select * from menu_items where 
             category_id = (
                select id from categories where 
-               name = $1
+               name = ?
             )
          `,
          [categoryName],
@@ -50,7 +48,7 @@ export const menuModel = {
       return pool.query(
          `
          select id from categories where 
-         name = $1
+         name = ?
       `,
          [categoryName],
       );
@@ -60,12 +58,11 @@ export const menuModel = {
       return pool.query(
          `
          update menu_items set 
-         name = $1, 
-         price = $2, 
-         description = $3, 
-         image_url = $4 
-         where id = $5 
-         returning *
+         name = ?, 
+         price = ?, 
+         description = ?, 
+         image_url = ? 
+         where id = ? 
       `,
          [name, price, description, imageUrl, id],
       );
@@ -81,13 +78,7 @@ export const menuModel = {
             description, 
             image_url
          ) 
-         values (
-            $1, 
-            $2, 
-            $3, 
-            $4, 
-            $5
-         )
+         values (?, ?, ?, ?, ?)
       `,
          [categoryId, name, price, description, imageUrl],
       );
@@ -97,7 +88,7 @@ export const menuModel = {
       return pool.query(
          `
          delete from menu_items 
-         where id = $1
+         where id = ?
       `,
          [id],
       );

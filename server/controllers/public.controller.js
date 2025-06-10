@@ -6,7 +6,7 @@ export const getSliders = async (req, res) => {
 
       res.status(200).json({
          success: true,
-         data: result.rows,
+         data: result[0],
       });
    } catch (e) {
       res.status(500).json({
@@ -24,7 +24,7 @@ export const getMenu = async (req, res) => {
 
       res.status(200).json({
          success: true,
-         data: result.rows,
+         data: result[0],
       });
    } catch (e) {
       res.status(500).json({
