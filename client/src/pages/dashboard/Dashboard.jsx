@@ -5,7 +5,7 @@ import { SideBar } from "./sections/Sidebar/Sidebar";
 import styles from "./Dashboard.module.css";
 
 const DashboardPage = () => {
-   const currentActiveSection = sessionStorage.getItem("activeSection");
+   const currentActiveSection = sessionStorage.getItem("activeSection") || "dashboard";
    const [activeSection, setActiveSection] = useState(currentActiveSection);
 
    const sections = [
@@ -70,8 +70,6 @@ const DashboardPage = () => {
                   <div className={styles.placeholder}>...</div>
                </div>
             );
-         default:
-            return <div className={styles.content}>Seleccione una sección</div>;
       }
    };
 
