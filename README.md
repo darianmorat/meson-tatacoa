@@ -7,7 +7,6 @@ Official website for **Meson De La Tatacoa**
 ## Features
 
 - Modern, responsive website
-- Mobile-friendly experience
 - Online reservation system
 - Interactive 3D map and 360 route
 - Administration dashboard
