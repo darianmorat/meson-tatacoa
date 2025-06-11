@@ -15,7 +15,7 @@ export const HOTSPOTS = [
    {
       id: 1,
       category: "reservation",
-      position: [-0.9, -0.42, 0.1],
+      position: [-0.15, -0.38, 1.15],
       info: {
          title: "#1 MIOCOCHILIUS",
          description: "1 cama doble,pareja, baño privado",
@@ -24,7 +24,7 @@ export const HOTSPOTS = [
    {
       id: 2,
       category: "reservation",
-      position: [-0.8, -0.4, 0.7],
+      position: [0.4, -0.38, 1.38],
       info: {
          title: "#2 HUILATHERIUM",
          description: "1 cama doble, pareja, baño privado",
@@ -33,7 +33,7 @@ export const HOTSPOTS = [
    {
       id: 3,
       category: "reservation",
-      position: [-0.15, -0.38, 1.15],
+      position: [1.1, -0.28, 0.7],
       info: {
          title: "#3 STIRTONIA",
          description:
@@ -43,29 +43,29 @@ export const HOTSPOTS = [
    {
       id: 4,
       category: "reservation",
-      position: [-2.0, -0.48, -0.15],
+      position: [-0.9, -0.42, 0.1],
       info: {
          title: "#4 PHORUSRHACIDAE",
          description:
-            "3 camas dobles acomodacion multiple, familiar 6 personas,  no tiene baño",
-      },
-   },
-   {
-      id: 5,
-      category: "reservation",
-      position: [1.1, -0.28, 0.7],
-      info: {
-         title: "#5 STUPENDEMYS",
-         description:
-            "2 camas dobles 4 personas acomodación multiple familiar baño privado",
+            "3 camas dobles acomodacion multiple, familiar 6 personas, no tiene baño",
       },
    },
    {
       id: 6,
       category: "reservation",
-      position: [0.4, -0.38, 1.38],
+      position: [-2.45, -0.55, -0.35],
       info: {
-         title: "#6 PURUSSAURUS",
+         title: "#6 STUPENDEMYS",
+         description:
+            "2 camas dobles 4 personas acomodación multiple familiar baño privado",
+      },
+   },
+   {
+      id: 7,
+      category: "reservation",
+      position: [-1.75, -0.55, -1.25],
+      info: {
+         title: "#7 PURUSSAURUS",
          description:
             "2 camas dobles  4 personas acomodación multiple familiar baño privado",
       },

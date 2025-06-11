@@ -5,8 +5,13 @@ import View360, {
    LoadingSpinner,
 } from "@egjs/react-view360";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import image360_1 from "../../../assets/map-section/panoramic-img/shot-panoramic-composition-living-room.jpg";
-import image360_2 from "../../../assets/map-section/panoramic-img/OpenfootageNET_Hotel_low.jpg";
+import image360_1 from "../../../assets/map-section/panoramic-img/1.JPG";
+import image360_2 from "../../../assets/map-section/panoramic-img/2.JPG";
+import image360_3 from "../../../assets/map-section/panoramic-img/3.JPG";
+import image360_4 from "../../../assets/map-section/panoramic-img/4.JPG";
+import image360_6 from "../../../assets/map-section/panoramic-img/6.JPG";
+import image360_7 from "../../../assets/map-section/panoramic-img/7.JPG";
+import image360_100 from "../../../assets/map-section/panoramic-img/pool.JPG";
 import "@egjs/react-view360/css/view360.min.css";
 import styles from "./Preview360.module.css";
 
@@ -18,23 +23,27 @@ const My360Viewer = ({ id }) => {
       },
       2: {
          googleMap: "https://maps.app.goo.gl/PhdpLKjzk2Lb8mru6",
-         imageSrc: image360_1,
+         imageSrc: image360_2,
       },
       3: {
          googleMap: "https://maps.app.goo.gl/eQihYFm9JQN7Uq8s7",
-         imageSrc: image360_1,
+         imageSrc: image360_3,
       },
       4: {
          googleMap: "https://maps.app.goo.gl/eQihYFm9JQN7Uq8s7",
-         imageSrc: image360_1,
+         imageSrc: image360_4,
       },
-      5: {
+      6: {
          googleMap: "https://maps.app.goo.gl/eQihYFm9JQN7Uq8s7",
-         imageSrc: image360_1,
+         imageSrc: image360_6,
+      },
+      7: {
+         googleMap: "https://maps.app.goo.gl/eQihYFm9JQN7Uq8s7",
+         imageSrc: image360_7,
       },
       100: {
          googleMap: "https://maps.app.goo.gl/PhdpLKjzk2Lb8mru6",
-         imageSrc: image360_2,
+         imageSrc: image360_100,
       },
    };
 
