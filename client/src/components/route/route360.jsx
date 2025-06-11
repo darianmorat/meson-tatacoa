@@ -40,12 +40,16 @@ const My360Route = () => {
          </div>
          <div className={styles.description}>
             <div>
-               <h3>Ruta de la Mega Fauna</h3>
+               <h3>Descripción:</h3>
                <p>
                   Es un sendero de 3.600 metros de recorrido por los terrenos del estadero
                   Mesón de la Tatacoa, ubicado en la vereda Cabuyal – Líbano, en pleno
                   corazón del desierto de la Tatacoa en el municipio de Villavieja Huila.
                </p>
+            </div>
+            <hr />
+            <div>
+               <h3>Objetivo:</h3>
                <p>
                   El objetivo de la ruta es sensibilizar de manera educativa a los
                   turistas a través del sendero conociendo la historia milenaria

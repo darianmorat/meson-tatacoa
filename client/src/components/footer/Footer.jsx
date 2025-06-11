@@ -64,11 +64,11 @@ const Footer = () => {
                               className={styles.icon}
                            />
                            <a
-                              href="https://web.whatsapp.com/send?phone=111111111&text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios%21"
+                              href="https://web.whatsapp.com/send?phone=3202307561&text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios%21"
                               target="_blank"
                               rel="noopener noreferrer"
                            >
-                              +57 (111) 111-111
+                              +57 (320) 230-7561
                            </a>
                         </li>
                         <li>

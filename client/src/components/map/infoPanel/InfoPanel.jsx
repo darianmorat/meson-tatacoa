@@ -38,25 +38,31 @@ const ViewerPanel = ({ hotspotId, hotspotData, onReservation }) => {
             </>
          ) : (
             <>
-               <div>
-                  <h3>Zonas recreativas</h3>
-                  <p>
-                     Espacios apropiados para la recreación y descanso.En el Mesón de la
-                     Tatacoa, nuestros visitantes disfrutan de la mejor experiencia en las
-                     zonas grises del desierto de La Tatacoa.
-                  </p>
-                  <br />
-                  <h3>Cabañas Ecológicas</h3>
-                  <p>
-                     Hechas en guadua y peñón contribuyen a mitigar el impacto ambiental.
-                     Cuentan con cama doble y baño privado.
-                  </p>
-                  <br />
-                  <h3>Zona de Camping</h3>
-                  <p>
-                     Zonas verdes propicias para atender grupos grandes en camping con las
-                     comodidades necesarias del alojamiento rural.
-                  </p>
+               <div className={styles.extraData}>
+                  <div>
+                     <h3>Zonas recreativas:</h3>
+                     <p>
+                        Espacios apropiados para la recreación y descanso.En el Mesón de
+                        la Tatacoa, nuestros visitantes disfrutan de la mejor experiencia
+                        en las zonas grises del desierto de La Tatacoa.
+                     </p>
+                  </div>
+                  <hr />
+                  <div>
+                     <h3>Cabañas Ecológicas:</h3>
+                     <p>
+                        Hechas en guadua y peñón contribuyen a mitigar el impacto
+                        ambiental. Cuentan con cama doble y baño privado.
+                     </p>
+                  </div>
+                  <hr />
+                  <div>
+                     <h3>Zona de Camping:</h3>
+                     <p>
+                        Zonas verdes propicias para atender grupos grandes en camping con
+                        las comodidades necesarias del alojamiento rural.
+                     </p>
+                  </div>
                </div>
             </>
          )}

@@ -52,7 +52,12 @@ const MainPage = () => {
                <section className={styles.museumSection}>
                   <header className={styles.titleHeader}>
                      <h2>Museo</h2>
-                     <p>Descubre nuestro catalogo de fosiles!</p>
+                     <p>
+                        Museo de paleontología LA Tormenta con más de 5.000 piezas de
+                        animales prehistoricos como lugar de interes turistico, academico
+                        y de investigación
+                     </p>
+                     <br/>
                      <p>(PROXIMAMENTE)</p>
                   </header>
                </section>
