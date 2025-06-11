@@ -23,6 +23,7 @@ const ViewerPanel = ({ hotspotId, hotspotData, onReservation }) => {
                ) : (
                   <>
                      <My360Viewer id={hotspotId} />
+                     <hr />
                      <div className={styles.panelData}>
                         <div>
                            <h3>{hotspotData.info.title}</h3>
@@ -38,22 +39,23 @@ const ViewerPanel = ({ hotspotId, hotspotData, onReservation }) => {
          ) : (
             <>
                <div>
-                  <h3>Intrucciones de uso</h3>
+                  <h3>Zonas recreativas</h3>
                   <p>
-                     Aca ira la informcion y detalles de como poder usar mejor el mapa, de
-                     esa manera los usuarios no estaran perdidos.
+                     Espacios apropiados para la recreación y descanso.En el Mesón de la
+                     Tatacoa, nuestros visitantes disfrutan de la mejor experiencia en las
+                     zonas grises del desierto de La Tatacoa.
                   </p>
                   <br />
-                  <h3>Informacion relevante</h3>
+                  <h3>Cabañas Ecológicas</h3>
                   <p>
-                     Aca ira la informcion y detalles de como poder usar mejor el mapa, de
-                     esa manera los usuarios no estaran perdidos.
+                     Hechas en guadua y peñón contribuyen a mitigar el impacto ambiental.
+                     Cuentan con cama doble y baño privado.
                   </p>
                   <br />
-                  <h3>Informacion relevante</h3>
+                  <h3>Zona de Camping</h3>
                   <p>
-                     Aca ira la informcion y detalles de como poder usar mejor el mapa, de
-                     esa manera los usuarios no estaran perdidos.
+                     Zonas verdes propicias para atender grupos grandes en camping con las
+                     comodidades necesarias del alojamiento rural.
                   </p>
                </div>
             </>

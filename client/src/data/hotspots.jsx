@@ -6,7 +6,7 @@ export const POOL_HOTSPOT = [
       info: {
          title: "PISCINA",
          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nulla at suscipit cursus, felis turpis dictum odio, ut tincidunt magna risus in ante. Integer sed justo sed velit egestas semper. Curabitur finibus convallis.",
+            "Espacios apropiados para la recreación y descanso, disfruta de nuestros servicios de piscina los cuales estan incluidos dentro de tu estadia",
       },
    },
 ];
@@ -18,7 +18,8 @@ export const HOTSPOTS = [
       position: [-0.15, -0.38, 1.15],
       info: {
          title: "#1 MIOCOCHILIUS",
-         description: "1 cama doble,pareja, baño privado",
+         description:
+            "1 cama doble ideal para parejas, incluye baño privado y comodidades necesarias",
       },
    },
    {
@@ -27,7 +28,8 @@ export const HOTSPOTS = [
       position: [0.4, -0.38, 1.38],
       info: {
          title: "#2 HUILATHERIUM",
-         description: "1 cama doble, pareja, baño privado",
+         description:
+            "1 cama doble ideal para parejas, incluye baño privado y comodidades necesarias",
       },
    },
    {
@@ -37,7 +39,7 @@ export const HOTSPOTS = [
       info: {
          title: "#3 STIRTONIA",
          description:
-            "2 camas dobles familia, 4 personas acomodación multiple familiar baño privado",
+            "2 camas dobles ideal para familias, 4 personas, incluye baño privado",
       },
    },
    {
@@ -47,7 +49,7 @@ export const HOTSPOTS = [
       info: {
          title: "#4 PHORUSRHACIDAE",
          description:
-            "3 camas dobles acomodacion multiple, familiar 6 personas, no tiene baño",
+            "3 camas dobles acomodacion multiple, familiar 6 personas, no cuenta con baño",
       },
    },
    {
@@ -57,7 +59,7 @@ export const HOTSPOTS = [
       info: {
          title: "#6 STUPENDEMYS",
          description:
-            "2 camas dobles 4 personas acomodación multiple familiar baño privado",
+            "2 camas dobles 4 personas acomodación multiple familiar, incluye baño privado",
       },
    },
    {
@@ -67,7 +69,7 @@ export const HOTSPOTS = [
       info: {
          title: "#7 PURUSSAURUS",
          description:
-            "2 camas dobles  4 personas acomodación multiple familiar baño privado",
+            "2 camas dobles 4 personas acomodación multiple familiar, incluye baño privado",
       },
    },
 ];

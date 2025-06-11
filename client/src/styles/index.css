@@ -24,6 +24,12 @@ h3 {
    color: var(--font-color-title);
 }
 
+hr {
+   border: none;
+   border-bottom: 2px dashed var(--color-secondary);
+   margin-top: 10px;
+}
+
 a {
    display: flex;
    align-items: center;
