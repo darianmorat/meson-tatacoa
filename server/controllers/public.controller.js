@@ -1,6 +1,6 @@
-import { menuModel, sliderModel } from "../models/db.model.js";
+const { sliderModel, menuModel } = require("../models/db.model");
 
-export const getSliders = async (req, res) => {
+const getSliders = async (req, res) => {
    try {
       const result = await sliderModel.get();
 
@@ -16,7 +16,7 @@ export const getSliders = async (req, res) => {
    }
 };
 
-export const getMenu = async (req, res) => {
+const getMenu = async (req, res) => {
    try {
       const { categoryName } = req.query;
 
@@ -32,4 +32,9 @@ export const getMenu = async (req, res) => {
          message: "server error",
       });
    }
+};
+
+module.exports = {
+   getSliders,
+   getMenu,
 };

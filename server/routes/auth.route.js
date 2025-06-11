@@ -1,10 +1,10 @@
-import { Router } from "express";
-import { authenticate, verifyUser } from "../controllers/auth.controller.js";
-import limiter from "../middleware/limiter.middleware.js";
+const express = require("express");
+const { authenticate, verifyUser } = require("../controllers/auth.controller");
+const limiter = require("../middleware/limiter.middleware");
 
-const router = Router();
+const router = express.Router();
 
 router.post("/access", limiter, authenticate);
 router.get("/verify", verifyUser);
 
-export default router;
+module.exports = router;

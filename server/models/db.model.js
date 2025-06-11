@@ -1,6 +1,6 @@
-import pool from "../db/pool.js";
+const pool = require("../db/pool");
 
-export const sliderModel = {
+const sliderModel = {
    get: async () => {
       return pool.query(
          ` 
@@ -30,7 +30,7 @@ export const sliderModel = {
    },
 };
 
-export const menuModel = {
+const menuModel = {
    get: async (categoryName) => {
       return pool.query(
          `
@@ -93,4 +93,9 @@ export const menuModel = {
          [id],
       );
    },
+};
+
+module.exports = {
+   sliderModel,
+   menuModel,
 };

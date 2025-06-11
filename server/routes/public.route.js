@@ -1,9 +1,9 @@
-import { Router } from "express";
-import { getSliders, getMenu } from "../controllers/public.controller.js";
+const express = require("express");
+const { getSliders, getMenu } = require("../controllers/public.controller");
 
-const router = Router();
+const router = express.Router();
 
 router.get("/sliders", getSliders);
 router.get("/menu", getMenu);
 
-export default router;
+module.exports = router;

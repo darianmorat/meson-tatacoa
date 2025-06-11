@@ -1,6 +1,6 @@
-import { menuModel, sliderModel } from "../models/db.model.js";
+const { sliderModel, menuModel } = require("../models/db.model");
 
-export const createSlider = async (req, res) => {
+const createSlider = async (req, res) => {
    try {
       const { imageUrl } = req.body;
 
@@ -18,7 +18,7 @@ export const createSlider = async (req, res) => {
    }
 };
 
-export const deleteSlider = async (req, res) => {
+const deleteSlider = async (req, res) => {
    try {
       const { id } = req.params;
 
@@ -36,7 +36,7 @@ export const deleteSlider = async (req, res) => {
    }
 };
 
-export const editMenu = async (req, res) => {
+const editMenu = async (req, res) => {
    try {
       const { name, price, description, imageUrl } = req.body;
       const { id } = req.params;
@@ -55,7 +55,7 @@ export const editMenu = async (req, res) => {
    }
 };
 
-export const createMenu = async (req, res) => {
+const createMenu = async (req, res) => {
    try {
       const { categoryName } = req.query;
       const { name, price, description, imageUrl } = req.body;
@@ -77,7 +77,7 @@ export const createMenu = async (req, res) => {
    }
 };
 
-export const deleteMenu = async (req, res) => {
+const deleteMenu = async (req, res) => {
    try {
       const { id } = req.params;
 
@@ -93,4 +93,12 @@ export const deleteMenu = async (req, res) => {
          message: "server error",
       });
    }
+};
+
+module.exports = {
+   createSlider,
+   deleteSlider,
+   editMenu,
+   createMenu,
+   deleteMenu,
 };

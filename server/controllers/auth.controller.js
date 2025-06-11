@@ -1,8 +1,8 @@
-import { jwtGenerator } from "../utils/jwtGenerator.js";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
+const jwtGenerator = require("../utils/jwtGenerator");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
 
-export const authenticate = async (req, res) => {
+const authenticate = async (req, res) => {
    try {
       const { password } = req.body;
       const adminPassword = process.env.ADMIN_PASSWORD;
@@ -26,7 +26,7 @@ export const authenticate = async (req, res) => {
    }
 };
 
-export const verifyUser = async (req, res) => {
+const verifyUser = async (req, res) => {
    try {
       const token = req.header("token");
 
@@ -40,8 +40,15 @@ export const verifyUser = async (req, res) => {
       }
    } catch (e) {
       if (e.name === "TokenExpiredError") {
-         return res.status(401).json({ success: false, message: "Tu sesión ha expirado" });
+         return res
+            .status(401)
+            .json({ success: false, message: "Tu sesión ha expirado" });
       }
       res.status(403).json({ success: false, message: "Token inválido" });
    }
+};
+
+module.exports = {
+   authenticate,
+   verifyUser,
 };

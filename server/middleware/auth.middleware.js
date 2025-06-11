@@ -1,9 +1,9 @@
-import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
+const jwt = require("jsonwebtoken");
+const dotenv = require("dotenv");
 
 dotenv.config();
 
-export default async (req, res, next) => {
+module.exports = async (req, res, next) => {
    try {
       // WHICH ONE HERE SHOULD I LEAVE TO CHECK IN THE BACKEND
 
