@@ -1,6 +1,6 @@
 # Meson Tatacoa
 
-Official website for **El Meson De La Tatacoa**
+Official website for **Meson De La Tatacoa**
 
 > [Visit Live Website](https://mesondelatatacoa.com/)
 
