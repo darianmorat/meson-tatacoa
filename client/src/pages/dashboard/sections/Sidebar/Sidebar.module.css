@@ -46,12 +46,8 @@
    text-align: left;
 
    &.active {
-      background-color: var(--color-secondary);
+      background-color: var(--color-sidebar);
       font-weight: bold;
-   }
-
-   &.hover {
-      filter: brightness(2);
    }
 }
 

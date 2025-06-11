@@ -37,6 +37,7 @@ export const SliderSection = () => {
                onClick={() => {
                   createSlider(imageUrl), setImageUrl("");
                }}
+               disabled={!imageUrl}
             >
                + Añadir nueva imagen
             </button>
