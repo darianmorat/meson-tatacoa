@@ -4,7 +4,7 @@ import View360, {
    EquirectProjection,
    LoadingSpinner,
 } from "@egjs/react-view360";
-import video360_1 from "../../assets/route-section/video360.mp4";
+import video360_1 from "../../assets/route-section/megafauna.mp4";
 import "@egjs/react-view360/css/view360.min.css";
 import styles from "./route360.module.css";
 
@@ -40,22 +40,17 @@ const My360Route = () => {
          </div>
          <div className={styles.description}>
             <div>
-               <h3>Intrucciones de uso</h3>
+               <h3>Ruta de la Mega Fauna</h3>
                <p>
-                  Aca ira la informcion y detalles de como poder usar mejor el mapa, de
-                  esa manera los usuarios no estaran perdidos.
+                  Es un sendero de 3.600 metros de recorrido por los terrenos del estadero
+                  Mesón de la Tatacoa, ubicado en la vereda Cabuyal – Líbano, en pleno
+                  corazón del desierto de la Tatacoa en el municipio de Villavieja Huila.
                </p>
-               <br />
-               <h3>Informacion relevante</h3>
                <p>
-                  Aca ira la informcion y detalles de como poder usar mejor el mapa, de
-                  esa manera los usuarios no estaran perdidos.
-               </p>
-               <br />
-               <h3>Informacion relevante</h3>
-               <p>
-                  Aca ira la informcion y detalles de como poder usar mejor el mapa, de
-                  esa manera los usuarios no estaran perdidos.
+                  El objetivo de la ruta es sensibilizar de manera educativa a los
+                  turistas a través del sendero conociendo la historia milenaria
+                  paleontológica de la región, sus fósiles, estado natural de
+                  conservación, su recolección, como se diferencian unos de otros.
                </p>
             </div>
          </div>
