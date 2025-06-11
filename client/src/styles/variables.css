@@ -1,7 +1,7 @@
 :root {
    /* Colors */
    --color-primary: #49a133;
-   --color-secondary: #215d9e;
+   --color-secondary: #212121;
 
    --bg-color-primary: white;
    --bg-color-secondary: #f9fafb;
@@ -9,6 +9,7 @@
 
    /* Dashboard */
    --color-logout: #e74c3c;
+   --color-sidebar: #215d9e;
    --bg-color-sidebar: #2c3e50;
 
    /* Effects */
@@ -30,6 +31,6 @@
    --font-size-md: 1.2rem;
    --font-size-lg: 2rem;
 
-   --font-color-base: #303030;
-   --font-color-title: #215d9e;
+   --font-color-base: #101010;
+   --font-color-title: #212121;
 }

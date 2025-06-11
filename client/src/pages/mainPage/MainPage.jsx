@@ -11,10 +11,8 @@ const MainPage = () => {
             <div className={styles.slider}>
                <section className={styles.sliderSection}>
                   <header className={styles.titleHeader}>
-                     <h2>El Meson De La Tatacoa</h2>
-                     <p>
-                        Explora la belleza de nuestra tierra Huila-Neiva y sus alrededores
-                     </p>
+                     <h2>Meson De La Tatacoa</h2>
+                     <p>Turismo rural de aventura, explora y disfruta sus alrededores</p>
                   </header>
                   <BackgroundSlider />
                </section>
@@ -23,8 +21,8 @@ const MainPage = () => {
             <div className={styles.map} id="map">
                <section className={styles.mapSection}>
                   <header className={styles.titleHeader}>
-                     <h2>Hospedaje</h2>
-                     <p>Mapa 360 - Novedad y usabilidad</p>
+                     <h2>Alojamiento Rural</h2>
+                     <p>Cabañas ecológicas y zona de camping</p>
                   </header>
                   <MapRender />
                </section>
@@ -33,8 +31,8 @@ const MainPage = () => {
             <div className={styles.restaurant} id="restaurant">
                <section className={styles.restaurantSection}>
                   <header className={styles.titleHeader}>
-                     <h2>Restaurante Gourmet</h2>
-                     <p>Ofreciendo platos Huilenses!</p>
+                     <h2>Restaurante</h2>
+                     <p>Ofreciendo platos tipicos Huilenses</p>
                   </header>
                   <MenuDisplay />
                </section>
@@ -44,7 +42,7 @@ const MainPage = () => {
                <section className={styles.routeSection}>
                   <header className={styles.titleHeader}>
                      <h2>Mega Fauna</h2>
-                     <p>Ruta 360 - Descubrelo de una nueva manera</p>
+                     <p>Ruta 360, explora en realidad aumentada!</p>
                   </header>
                   <My360Route />
                </section>

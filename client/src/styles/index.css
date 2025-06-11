@@ -69,16 +69,13 @@ button {
    background-color: var(--color-secondary);
 
    &:hover {
-      filter: brightness(1.1);
+      text-decoration: underline;
    }
 
    &:disabled {
       cursor: not-allowed;
       background-color: #999;
-   }
-
-   &:disabled:hover {
-      filter: brightness(1);
+      text-decoration: none;
    }
 }
 
