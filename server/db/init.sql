@@ -16,6 +16,17 @@ CREATE TABLE slider_imgs (
    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+-- Create this later for the drop image
+-- CREATE TABLE slider_imgs (
+--    id CHAR(36) PRIMARY KEY DEFAULT (UUID()),
+--    image_data LONGTEXT NOT NULL,
+--    image_name VARCHAR(255) NOT NULL,
+--    image_type VARCHAR(50) NOT NULL,
+--    image_size INT,
+--    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+--    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+-- );
+
 -- Restaurant section
 CREATE TABLE categories (
    id CHAR(36) PRIMARY KEY DEFAULT (UUID()),

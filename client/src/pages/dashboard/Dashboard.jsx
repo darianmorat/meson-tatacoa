@@ -27,9 +27,9 @@ const DashboardPage = () => {
                      menú para gestionar.
                   </p>
                   <div className={styles.stats}>
-                     <div className={styles.statCard}>Visitantes Totales: --</div>
-                     <div className={styles.statCard}>Reservas Activas: --</div>
-                     <div className={styles.statCard}>Mensajes: --</div>
+                     <div className={styles.statCard}>Visitas Totales: <strong>21</strong></div>
+                     <div className={styles.statCard}>Reservas Activas: <strong>13</strong></div>
+                     <div className={styles.statCard}>Mensajes activos: <strong>04</strong></div>
                   </div>
                </div>
             );
@@ -49,7 +49,7 @@ const DashboardPage = () => {
                <div className={styles.content}>
                   <h2>Gestion de Hospedaje</h2>
                   <p>Administra las opciones y disponibilidad de alojamiento.</p>
-                  <div className={styles.placeholder}>...</div>
+                  <div className={styles.placeholder}>Proximamente...</div>
                </div>
             );
          case "restaurante":
@@ -65,9 +65,9 @@ const DashboardPage = () => {
          case "megafauna":
             return (
                <div className={styles.content}>
-                  <h2>Gestion de Megafauna</h2>
+                  <h2>Gestion de Mega fauna</h2>
                   <p>Edita información sobre la fauna local.</p>
-                  <div className={styles.placeholder}>...</div>
+                  <div className={styles.placeholder}>Proximamente...</div>
                </div>
             );
       }

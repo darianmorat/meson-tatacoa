@@ -1,20 +1,13 @@
 .categoryTabs {
    display: flex;
-   justify-content: space-evenly;
+   justify-content: center;
    flex-wrap: wrap;
    margin-bottom: 25px;
    gap: 10px 90px;
 
-   & button {
-      width: 100%;
-      max-width: 180px;
-   }
-
    & div {
       display: flex;
       gap: 10px;
-      width: 100%;
-      max-width: 300px;
    }
 
    & .tabBtn {
