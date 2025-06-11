@@ -78,6 +78,7 @@
 
 .dots {
    display: flex;
+   min-width: 150px;
    gap: 0.5rem;
 
    & .dot {

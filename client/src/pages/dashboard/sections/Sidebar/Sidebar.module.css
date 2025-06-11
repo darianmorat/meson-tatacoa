@@ -9,6 +9,7 @@
    flex-direction: column;
    gap: 20px;
    color: white;
+   z-index: 998;
 
    &.active {
       max-height: 500px;
