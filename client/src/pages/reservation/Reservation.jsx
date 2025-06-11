@@ -39,15 +39,26 @@ const ReservationPage = () => {
          `*Propiedad:* ${reservationInfo?.title || "No especificada"}\n` +
          `*Nombre:* [${data.name}]\n` +
          `*Email:* ${data.email}\n` +
-         `*Celular:* ${data.phone}\n` +
          `*Fechas:*\n` +
          `  ➔ *Entrada:* ${data.checkIn}\n` +
          `  ➔ *Salida:* ${data.checkOut}\n` +
          `*Invitados:* ${data.guests}\n` +
          `*Solicitudes:* ${data.specialRequests || "Ninguna"}`;
 
-      const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
-      await fetch(url);
+      const whatsappLink = `https://wa.me/57${data.phone}?text=Hola%20${data.name}!`;
+
+      await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+         method: "POST",
+         headers: { "Content-Type": "application/json" },
+         body: JSON.stringify({
+            chat_id: chatId,
+            text: message,
+            parse_mode: "Markdown",
+            reply_markup: {
+               inline_keyboard: [[{ text: "Contactar por WhatsApp", url: whatsappLink }]],
+            },
+         }),
+      });
    };
 
    const onSubmit = async (data) => {
