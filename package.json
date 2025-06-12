@@ -1,13 +1,13 @@
 {
    "name": "meson-tatacoa",
    "version": "1.0.0",
-   "main": "index.js",
+   "main": "app.js",
    "scripts": {
       "start": "node app.js",
       "dev": "nodemon server/app.js"
    },
    "keywords": [],
-   "author": "",
+   "author": "darianmorat",
    "license": "ISC",
    "description": "",
    "dependencies": {
