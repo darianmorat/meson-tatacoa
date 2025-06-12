@@ -24,6 +24,7 @@
 
 .menuItems {
    display: flex;
+   justify-content: center;
    flex-wrap: wrap;
    gap: 25px;
 
@@ -32,9 +33,10 @@
       box-shadow: var(--shadow-sm);
       overflow: hidden;
       transition: var(--transition-normal);
-      position: relative;
       width: 100%;
       max-width: 260px;
+      position: relative;
+      text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
