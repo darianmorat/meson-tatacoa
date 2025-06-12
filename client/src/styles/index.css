@@ -41,6 +41,7 @@ a {
    &:hover {
       color: #007bff;
       text-decoration: underline;
+      text-decoration-thickness: 2px;
    }
 }
 
@@ -77,6 +78,7 @@ button {
 
    &:hover {
       text-decoration: underline;
+      text-decoration-thickness: 2px;
    }
 
    &:disabled {

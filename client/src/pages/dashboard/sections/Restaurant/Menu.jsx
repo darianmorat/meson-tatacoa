@@ -67,7 +67,7 @@ export const MenuSection = () => {
                   className={`${styles.tabBtn} ${activeCategory === "Postres" ? styles.active : ""}`}
                   onClick={() => handleCategoryClick("Postres")}
                >
-                  Postres
+                  Especiales
                </button>
             </div>
             <button className={styles.createBtn} onClick={() => setMenuContent("create")}>
@@ -80,13 +80,15 @@ export const MenuSection = () => {
                <>
                   {menuItems.map((item) => (
                      <div key={item.id} className={styles.menuItem}>
-                        <div className={styles.itemImage}>
-                           <img src={item.image_url} alt={item.name} />
-                        </div>
-                        <div className={styles.itemInfo}>
-                           <h3>{item.name}</h3>
-                           <p className={styles.itemPrice}>${item.price}</p>
-                           <p className={styles.itemDesc}>{item.description}</p>
+                        <div>
+                           <div className={styles.itemImage}>
+                              <img src={item.image_url} alt={item.name} />
+                           </div>
+                           <div className={styles.itemInfo}>
+                              <h3>{item.name}</h3>
+                              <p className={styles.itemPrice}>${item.price}</p>
+                              <p className={styles.itemDesc}>{item.description}</p>
+                           </div>
                         </div>
                         <div className={styles.actionBtns}>
                            <button

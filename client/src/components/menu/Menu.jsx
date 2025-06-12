@@ -27,7 +27,7 @@ const MenuDisplay = () => {
                className={`${styles.tabBtn} ${activeCategory === "Postres" ? styles.active : ""}`}
                onClick={() => handleCategoryClick("Postres")}
             >
-               Postres
+               Especiales
             </button>
          </div>
 

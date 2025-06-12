@@ -23,8 +23,8 @@
 }
 
 .menuItems {
-   display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   display: flex;
+   flex-wrap: wrap;
    gap: 25px;
 
    & .menuItem {
@@ -33,6 +33,11 @@
       overflow: hidden;
       transition: var(--transition-normal);
       position: relative;
+      width: 100%;
+      max-width: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       &:hover {
          .deleteBtn {
@@ -70,7 +75,6 @@
 .actionBtns {
    margin: 10px;
    display: flex;
-   /* gap: 10px; */
 
    & button {
       flex: 1;

@@ -79,8 +79,8 @@ export const CreateMenuForm = ({ setMenuContent, category }) => {
                         message: "Mínimo 35 caracteres",
                      },
                      maxLength: {
-                        value: 100,
-                        message: "Máximo 100 caracteres",
+                        value: 130,
+                        message: "Máximo 130 caracteres",
                      },
                   })}
                   className={errors.description ? styles.errorInput : ""}

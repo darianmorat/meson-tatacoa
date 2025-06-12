@@ -22,8 +22,9 @@
 }
 
 .menuItems {
-   display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
    gap: 25px;
 
    & .menuItem {
@@ -31,6 +32,9 @@
       box-shadow: var(--shadow-sm);
       overflow: hidden;
       transition: var(--transition-normal);
+      width: 100%;
+      max-width: 260px;
+      padding-bottom: 5px;
 
       &:hover {
          transform: translateY(-5px);
