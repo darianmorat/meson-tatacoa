@@ -4,7 +4,7 @@
 
 - **Frontend**: React.js
 - **Backend**: Express.js
-- **Database**: PostgreSQL
+- **Database**: MySQL
 
 ## System Overview
 
@@ -13,7 +13,6 @@
 ## API Reference
 
 - Postman collection: [View Collection](https://www.postman.com/meson-tatacoa/meson-tatacoa/overview)
- <!-- - Interactive Docs (Swagger UI): [View here](#) -->
 
 ## Getting Started
 
@@ -25,8 +24,12 @@ git clone https://github.com/darianmorat/meson-tatacoa.git
 cd meson-tatacoa
 
 # Database setup:
-createdb meson_db
-psql -U your_username -d your_database_name -a -f server/db/init.sql
+mysql -u root -p
+
+CREATE DATABASE meson_db;
+EXIT;
+
+mysql -u your_username -p meson_db < server/db/init.sql
 
 # Install dependencies:
 npm install && cd client && npm install
