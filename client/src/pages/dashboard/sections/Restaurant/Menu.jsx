@@ -61,7 +61,7 @@ export const MenuSection = () => {
                   className={`${styles.tabBtn} ${activeCategory === "Principales" ? styles.active : ""}`}
                   onClick={() => handleCategoryClick("Principales")}
                >
-                  Principales
+                  Típicos
                </button>
                <button
                   className={`${styles.tabBtn} ${activeCategory === "Postres" ? styles.active : ""}`}

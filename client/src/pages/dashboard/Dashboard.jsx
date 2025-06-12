@@ -12,7 +12,7 @@ const DashboardPage = () => {
       { id: "dashboard", name: "DASHBOARD" },
       { id: "slider", name: "SLIDER" },
       { id: "hospedaje", name: "HOSPEDAJE" },
-      { id: "restaurante", name: "RESTAURANTE" },
+      { id: "restaurante", name: "GASTRONOMIA" },
       { id: "megafauna", name: "MEGA FAUNA" },
    ];
 

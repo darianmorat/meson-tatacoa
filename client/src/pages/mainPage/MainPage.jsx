@@ -31,7 +31,7 @@ const MainPage = () => {
             <div className={styles.restaurant} id="restaurant">
                <section className={styles.restaurantSection}>
                   <header className={styles.titleHeader}>
-                     <h2>Restaurante</h2>
+                     <h2>Gastronomía</h2>
                      <p>Ofreciendo platos tipicos Huilenses</p>
                   </header>
                   <MenuDisplay />
