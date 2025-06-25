@@ -1,42 +1,19 @@
-import React, { useMemo } from "react";
-import View360, {
-   ControlBar,
-   EquirectProjection,
-   LoadingSpinner,
-} from "@egjs/react-view360";
-import video360_1 from "../../assets/route-section/megafauna.mp4";
-import "@egjs/react-view360/css/view360.min.css";
+import React from "react";
 import styles from "./route360.module.css";
 
 const My360Route = () => {
-   const plugins = useMemo(
-      () => [
-         new ControlBar({
-            autoHide: true,
-         }),
-         new LoadingSpinner({}),
-      ],
-      [],
-   );
-   const projection = useMemo(
-      () =>
-         new EquirectProjection({
-            src: video360_1,
-            video: {
-               autoplay: false,
-            },
-         }),
-      [],
-   );
-
    return (
       <div className={styles.route360}>
          <div className={styles.container}>
-            <View360
-               className={styles.is16by9}
-               plugins={plugins}
-               projection={projection}
-            />
+            <iframe
+               src="https://www.youtube-nocookie.com/embed/rrMtZNMdmv0?si=A2xLic9vUOnUnWzL"
+               title="YouTube video player"
+               frameBorder="0"
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+               referrerPolicy="strict-origin-when-cross-origin"
+               allowFullScreen
+               className={styles.iframe}
+            ></iframe>
          </div>
          <div className={styles.description}>
             <div>

@@ -3,14 +3,15 @@
    min-height: 520px;
    gap: 25px;
 }
+
+.iframe {
+   width: 100%;
+   border-radius: var(--border-radius-md);
+}
+
 .container {
    display: flex;
    flex: 2;
-}
-.is16by9 {
-   width: 100%;
-   box-shadow: var(--shadow-lg);
-   border-radius: var(--border-radius-md);
 }
 
 .description {
@@ -27,7 +28,7 @@
 }
 
 @media (max-width: 900px) {
-   .is16by9 {
+   .iframe {
       height: 380px;
    }
    .route360 {
