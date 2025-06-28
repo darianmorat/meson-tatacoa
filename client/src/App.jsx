@@ -45,6 +45,7 @@ function App() {
                   element={isAuth ? <DashboardPage /> : <Navigate to={"/"} />}
                />
             </Route>
+            <Route path="*" element={<Navigate to="/" />} />
          </Routes>
          <ToastContainer
             theme="colored"
