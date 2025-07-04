@@ -18,4 +18,4 @@ For complete documentation, refer to the [/docs](https://github.com/darianmorat/
 ## License
 
 Proprietary software. All rights reserved  
-© 2025 El Meson De La Tatacoa
+© 2025 Meson De La Tatacoa
