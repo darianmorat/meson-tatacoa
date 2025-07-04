@@ -2,9 +2,8 @@
 
 ## Tech Stack
 
-- **Frontend**: React.js
-- **Backend**: Express.js
-- **Database**: MySQL
+- **Frontend**: React.js, JavaScript, CSS Modules
+- **Backend**: Express.js, Node.js, MySQL
 
 ## System Overview
 
