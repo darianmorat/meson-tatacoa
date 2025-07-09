@@ -6,7 +6,7 @@ const My360Route = () => {
       <div className={styles.route360}>
          <div className={styles.container}>
             <iframe
-               src="https://www.youtube-nocookie.com/embed/rrMtZNMdmv0?si=A2xLic9vUOnUnWzL"
+               src="https://www.youtube-nocookie.com/embed/ZcvtFyhkqDY?si=4kEC1E2_dwmutsht"
                title="YouTube video player"
                frameBorder="0"
                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
