@@ -13,7 +13,7 @@ Official website for **Meson De La Tatacoa**
 
 ## Documentation
 
-For complete documentation, refer to the [/docs](https://github.com/darianmorat/meson-tatacoa/tree/main/_docs) section.
+For complete documentation, refer to the [/docs](https://github.com/darianmorat/meson-tatacoa/tree/main/_docs) section
 
 ## License
 

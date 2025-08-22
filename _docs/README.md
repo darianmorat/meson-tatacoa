@@ -5,14 +5,6 @@
 - **Frontend**: React.js, JavaScript, CSS Modules
 - **Backend**: Express.js, Node.js, MySQL
 
-## System Overview
-
-- High-Level Architecture: [View Diagram](/docs/diagrams/system-architecture.png)
-
-## API Reference
-
-- Postman collection: [View Collection](https://www.postman.com/meson-tatacoa/meson-tatacoa/overview)
-
 ## Getting Started
 
 Follow these steps to run the project locally
